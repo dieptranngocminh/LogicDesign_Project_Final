@@ -87,7 +87,7 @@
         app:layout_constraintTop_toBottomOf="@+id/Password" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/create_new_account"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
         android:layout_marginTop="8dp"
@@ -95,5 +95,27 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_Login" />
+
+    <ImageView
+        android:id="@+id/hcmut_logo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="112dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.402"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/create_new_account"
+        app:srcCompat="@drawable/logo_hcmut" />
+
+    <ImageView
+        android:id="@+id/adt_logo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="112dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/create_new_account"
+        app:srcCompat="@drawable/logo_adt" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
