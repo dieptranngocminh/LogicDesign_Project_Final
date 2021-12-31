@@ -161,7 +161,7 @@
         android:text="REGISTER"
         android:textSize="32dp"
         android:textStyle="bold"
-        android:background=""
+        android:background="@null"
         android:textColor="#433C03"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
