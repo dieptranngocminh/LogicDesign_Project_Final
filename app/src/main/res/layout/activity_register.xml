@@ -14,6 +14,7 @@
         android:layout_marginEnd="24dp"
         android:layout_marginStart="24dp"
         android:ems="10"
+        android:background="#FFFFF0"
         android:hint="Username or phone number"
         android:inputType="textPersonName"
         android:minHeight="48dp"
@@ -57,6 +58,7 @@
         android:layout_marginEnd="24dp"
         android:layout_marginStart="24dp"
         android:ems="10"
+        android:background="#FFFFF0"
         android:hint="Password"
         android:minHeight="48dp"
         android:inputType="textPersonName"
@@ -67,4 +69,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Username"
         app:layout_constraintVertical_bias="0.04000002" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:background="#FFDEAD"
+        android:text="REGISTER"
+        android:textColor="#616161"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Password" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
