@@ -81,6 +81,7 @@
         android:textSize="32dp"
         android:textStyle="bold"
         android:background="@null"
+        android:backgroundTint="#00F1E683"
         android:textColor="#433C03"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
