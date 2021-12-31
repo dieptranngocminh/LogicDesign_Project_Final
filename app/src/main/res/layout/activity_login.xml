@@ -93,6 +93,7 @@
         android:layout_height="19dp"
         android:layout_marginTop="8dp"
         android:text="Create new account"
+        android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_Login" />
@@ -101,9 +102,9 @@
         android:id="@+id/hcmut_logo"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="100dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.402"
+        app:layout_constraintHorizontal_bias="0.398"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/create_new_account"
         app:srcCompat="@drawable/logo_hcmut" />
@@ -112,9 +113,9 @@
         android:id="@+id/adt_logo"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="100dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintHorizontal_bias="0.603"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/create_new_account"
         app:srcCompat="@drawable/logo_adt" />
