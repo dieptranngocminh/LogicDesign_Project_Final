@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "245219806063",
+    "project_id": "adt-qrscan",
+    "storage_bucket": "adt-qrscan.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:245219806063:android:f6615e63d11ad9a533b69a",
+        "android_client_info": {
+          "package_name": "com.example.logicdesign_project_final"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "245219806063-0bn4j2f2ipjcr22eseetlmkseqmvna4f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvxkRYU5VCu4Qw9uv1sRCsaL8CQ2WdQVI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "245219806063-0bn4j2f2ipjcr22eseetlmkseqmvna4f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:245219806063:android:7ec78ae9b1e9491233b69a",
+        "android_client_info": {
+          "package_name": "com.example.minhdiep.logicdesign_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "245219806063-0bn4j2f2ipjcr22eseetlmkseqmvna4f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvxkRYU5VCu4Qw9uv1sRCsaL8CQ2WdQVI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "245219806063-0bn4j2f2ipjcr22eseetlmkseqmvna4f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
