@@ -11,7 +11,7 @@
         android:theme="@style/Theme.LogicDesign_Project_Final">
         <activity
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:name=".MainActivity"
+            android:name=".Register"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,13 +22,13 @@
 
         <activity
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:name=".Register"
+            android:name=".Login"
             android:exported="false">
         </activity>
 
         <activity
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:name=".Login"
+            android:name=".MainActivity"
             android:exported="true">
 
         </activity>
