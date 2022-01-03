@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".qr_scanner">
+
+    <com.budiyev.android.codescanner.CodeScannerView
+        android:id="@+id/scanner_view"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:autoFocusButtonColor="#433C03"
+        app:autoFocusButtonVisible="true"
+        app:flashButtonColor="#433C03"
+        app:flashButtonVisible="true"
+        app:maskColor="#f8f1c2" />
+
+    <TextView
+        android:id="@+id/tv_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scanner_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:text="SCAN"
+        android:textColor="#433C03"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/hcmut_logo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/tv_textview"
+        android:layout_marginEnd="220dp"
+        android:layout_marginTop="170dp"
+        app:srcCompat="@drawable/logo_hcmut" />
+
+    <ImageView
+        android:id="@+id/adt_logo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/tv_textview"
+        android:layout_marginEnd="140dp"
+        android:layout_marginTop="170dp"
+        app:srcCompat="@drawable/logo_adt" />
+
+</RelativeLayout>

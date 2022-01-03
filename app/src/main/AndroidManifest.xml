@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.logicdesign_project_final">
-<uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LogicDesign_Project_Final">
         <activity
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:name=".qr_scanner"
+            android:exported="false" />
+        <activity
+            android:name=".Usermanual"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
             android:name=".Register"
             android:exported="true">
             <intent-filter>
@@ -19,19 +29,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:name=".Login"
-            android:exported="false">
-        </activity>
-
-        <activity
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:name=".MainActivity"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
