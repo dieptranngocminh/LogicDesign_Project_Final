@@ -7,6 +7,8 @@
     android:background="@drawable/background4"
     tools:context=".Register">
 
+    <include layout="@layout/toolbar"/>
+
     <TextView
         android:id="@+id/ADTQRSCAN"
         android:layout_width="wrap_content"
@@ -16,10 +18,10 @@
         android:textSize="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.062" />
+        app:layout_constraintVertical_bias="0.075" />
 
     <Button
         android:id="@+id/Register"
