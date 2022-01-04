@@ -17,6 +17,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class Register extends AppCompatActivity {
     EditText mFullName, mEmail, mPassWord, mPhone, mDob,mStudentID,mID;
@@ -42,10 +44,15 @@ public class Register extends AppCompatActivity {
         fAuth=FirebaseAuth.getInstance();
         progessBar=findViewById(R.id.progressBar2);
 
+
         if(fAuth.getCurrentUser() != null){
             startActivity(new Intent(getApplicationContext(),MainActivity.class));
             finish();
         }
+
+        // Write a message to the database
+
+
 
         mRegisterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,6 +90,11 @@ public class Register extends AppCompatActivity {
                         }
                     }
                 });
+//                // Write a message to the database
+                FirebaseDatabase database = FirebaseDatabase.getInstance("https://adt-qrscan-default-rtdb.firebaseio.com/");
+                DatabaseReference myRef = database.getReference("users");
+
+                myRef.setValue("Hello, World!");
             }
         });
     }
