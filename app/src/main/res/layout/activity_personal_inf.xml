@@ -147,4 +147,27 @@
         app:layout_constraintLeft_toLeftOf="@+id/Phonenumber"
         app:layout_constraintTop_toBottomOf="@+id/IDTitle" />
 
+    <TextView
+        android:id="@+id/PasswordTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="582dp"
+        android:text="Password"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@+id/ID"
+        app:layout_constraintTop_toBottomOf="@+id/IDTitle" />
+
+    <TextView
+        android:id="@+id/Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="620dp"
+        android:textSize="23dp"
+        android:text="aaaaa"
+        app:layout_constraintLeft_toLeftOf="@+id/PasswordTitle"
+        app:layout_constraintTop_toBottomOf="@+id/ID" />
+
 </RelativeLayout>

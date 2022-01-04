@@ -2,6 +2,7 @@ package com.example.logicdesign_project_final;
 
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -33,19 +34,37 @@ public class personal_inf extends AppCompatActivity {
         final TextView DobTextview = (TextView)findViewById(R.id.Dob);
         final TextView StudentIDTextview = (TextView)findViewById(R.id.StudentID);
         final TextView EmailTextview = (TextView)findViewById(R.id.Email);
-        final TextView PhonenameTextview = (TextView)findViewById(R.id.Phonenumber);
+        final TextView PhonenumberTextview = (TextView)findViewById(R.id.Phonenumber);
         final TextView IDTextview = (TextView)findViewById(R.id.ID);
         final TextView PasswordTextview = (TextView)findViewById(R.id.Password);
 
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                
+                User userProfile = snapshot.getValue(User.class);
+
+                if(userProfile != null){
+                    String Fullname = userProfile.Fullname;
+                    String Dob = userProfile.Dob;
+                    String StudentID = userProfile.StudentID;
+                    String Email = userProfile.Email;
+                    String Phonenumber = userProfile.Phonenumber;
+                    String ID = userProfile.ID;
+                    String Password = userProfile.Password;
+
+                    FullnameTextview.setText(Fullname);
+                    DobTextview.setText(Dob);
+                    StudentIDTextview.setText(StudentID);
+                    EmailTextview.setText(Email);
+                    PhonenumberTextview.setText(Phonenumber);
+                    IDTextview.setText(ID);
+                    PasswordTextview.setText(Password);
+                }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                Toast.makeText(personal_inf.this,"Something wrong happened!", Toast.LENGTH_LONG).show();
             }
         });
     }
