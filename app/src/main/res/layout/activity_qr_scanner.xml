@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/background4"
     tools:context=".qr_scanner">
 
     <com.budiyev.android.codescanner.CodeScannerView
@@ -15,7 +15,7 @@
         app:autoFocusButtonVisible="true"
         app:flashButtonColor="#433C03"
         app:flashButtonVisible="true"
-        app:maskColor="#f8f1c2" />
+        app:maskColor="#dbc18d" />
 
     <TextView
         android:id="@+id/tv_textview"

@@ -16,17 +16,6 @@
             android:layout_height="30dp"
             android:src="@drawable/ic_arrow_back"/>
 
-        <TextView
-            android:layout_width="272dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:paddingLeft="60dp"
-            android:text="PERSONAL INFORMATION"
-            android:textColor="#433C03"
-            android:textSize="20dp"
-            android:textStyle="bold" />
-
     </LinearLayout>
 
     <View

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/images"
+    android:background="@drawable/background4"
     tools:context=".Register">
 
     <TextView
@@ -31,7 +31,7 @@
         android:background="@null"
         android:backgroundTint="#00F1E683"
         android:text="REGISTER"
-        android:textColor="#433C03"
+        android:textColor="#fff6bb"
         android:textSize="32dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
