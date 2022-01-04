@@ -22,9 +22,10 @@
         android:layout_marginTop="60dp"
         android:text="Full name"
         android:textSize="23dp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constrintLeft_toLeftOf="parent" />
+        android:textStyle="bold"/>
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constrintLeft_toLeftOf="parent" -->
+
 
     <TextView
         android:id="@+id/Fullname"
