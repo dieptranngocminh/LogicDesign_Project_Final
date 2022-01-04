@@ -7,7 +7,7 @@
     android:background="@drawable/background4"
     tools:context=".qr_scanner">
 
-    <include layout="@layout/toolbar"/>
+    <include layout="@layout/toolbar" />
 
     <com.budiyev.android.codescanner.CodeScannerView
         android:id="@+id/scanner_view"
