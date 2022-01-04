@@ -16,7 +16,7 @@
             android:name=".personal_inf"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".qr_scanner"
             android:exported="false" />
         <activity
             android:name=".Usermanual"
@@ -25,14 +25,8 @@
             android:name=".Login"
             android:exported="false" />
         <activity
-            android:name=".qr_scanner"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:name=".MainActivity"
+            android:exported="false" />
         <activity
             android:name=".Register"
             android:exported="true">
