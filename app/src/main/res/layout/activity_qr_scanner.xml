@@ -7,10 +7,13 @@
     android:background="@drawable/background4"
     tools:context=".qr_scanner">
 
+    <include layout="@layout/toolbar"/>
+
     <com.budiyev.android.codescanner.CodeScannerView
         android:id="@+id/scanner_view"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="50dp"
         app:autoFocusButtonColor="#433C03"
         app:autoFocusButtonVisible="true"
         app:flashButtonColor="#433C03"
@@ -26,10 +29,10 @@
         android:layout_marginBottom="25dp"
         android:layout_marginEnd="25dp"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="25dp"
-        android:text="SCAN"
+        android:layout_marginTop="15dp"
+        android:text="SCAN HERE"
         android:textColor="#433C03"
-        android:textSize="30dp"
+        android:textSize="35dp"
         android:textStyle="bold" />
 
     <ImageView
