@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/user_manual_layout"
-    tools:context=".Usermanual">
+    tools:context=".personal_inf">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

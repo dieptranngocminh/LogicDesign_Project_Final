@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.logicdesign_project_final">
 
-    <uses-permission android:name="android.permission.CAMERA"/>
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,6 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LogicDesign_Project_Final">
+        <activity
+            android:name=".personal_inf"
+            android:exported="false" />
         <activity
             android:name=".qr_scanner"
             android:exported="false" />
@@ -39,7 +40,8 @@
             </intent-filter>
         </activity>
     </application>
-
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
 
 </manifest>
