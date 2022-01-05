@@ -71,7 +71,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
             editTextPassword.requestFocus();
             return;
         }
-        progressBar.setVisibility(View.VISIBLE);
+        //progressBar.setVisibility(View.VISIBLE);
 
         mAuth.signInWithEmailAndPassword(email,password)
                 .addOnCompleteListener(this,new OnCompleteListener<AuthResult>() {
