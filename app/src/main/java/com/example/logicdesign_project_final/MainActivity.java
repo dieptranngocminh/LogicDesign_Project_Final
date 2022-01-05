@@ -19,6 +19,60 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Button qrscannerbtn = (Button)findViewById(R.id.qrscanner);
+        Button routebtn = (Button)findViewById(R.id.route);
+        Button personalinfbtn = (Button)findViewById(R.id.personalinf);
+        Button settingbtn = (Button)findViewById(R.id.setting);
+        Button usermanualbtn = (Button)findViewById(R.id.usermanual);
+        Button aboutusbtn = (Button)findViewById(R.id.aboutus);
+
+        qrscannerbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent int1=new Intent(MainActivity.this, qr_scanner.class);
+                startActivity(int1);
+            }
+        });
+
+        routebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent int2=new Intent(MainActivity.this, Route.class);
+                startActivity(int2);
+            }
+        });
+
+        personalinfbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent int3=new Intent(MainActivity.this, personal_inf.class);
+                startActivity(int3);
+            }
+        });
+
+        settingbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent int4=new Intent(MainActivity.this, Setting.class);
+                startActivity(int4);
+            }
+        });
+
+        usermanualbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent int5=new Intent(MainActivity.this, Usermanual.class);
+                startActivity(int5);
+            }
+        });
+
+        aboutusbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent int6=new Intent(MainActivity.this, Aboutus.class);
+                startActivity(int6);
+            }
+        });
         logout = (Button) findViewById(R.id.Logout);
 
         logout.setOnClickListener(new View.OnClickListener() {

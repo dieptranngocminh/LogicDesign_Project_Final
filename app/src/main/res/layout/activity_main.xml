@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,206 +8,113 @@
     android:background="@drawable/background4"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <RelativeLayout
-            android:layout_marginTop="32dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/qrscanner"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="515dp"
+        android:layout_marginEnd="235dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="79dp"
+        android:background="@drawable/qr_code" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ADT QR-SCAN"
-                android:textColor="#696969"
-                android:textSize="23sp"
-                android:textStyle="bold" />
+    <Button
+        android:id="@+id/route"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="515dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginStart="235dp"
+        android:layout_marginTop="79dp"
+        android:background="@drawable/route" />
 
-            <ImageView
-                android:layout_alignParentRight="true"
-                android:src="@drawable/logo_adt"
-                android:layout_width="62dp"
-                android:layout_height="62dp" />
-        </RelativeLayout>
+    <Button
+        android:id="@+id/personalinf"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="330dp"
+        android:layout_marginEnd="235dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="269dp"
+        android:background="@drawable/personal_inf" />
 
-        <GridLayout
-            android:columnCount="2"
-            android:rowCount="3"
-            android:alignmentMode="alignMargins"
-            android:columnOrderPreserved="false"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/setting"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="330dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginStart="235dp"
+        android:layout_marginTop="269dp"
+        android:background="@drawable/setting" />
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                app:cardElevation="6dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/usermanual"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="144dp"
+        android:layout_marginEnd="235dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="455dp"
+        android:background="@drawable/user_manual" />
 
-                    <ImageView
-                        android:src="@drawable/qr_code"
-                        android:layout_width="120dp"
-                        android:layout_height="120dp" />
+    <Button
+        android:id="@+id/aboutus"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="144dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginStart="235dp"
+        android:layout_marginTop="455dp"
+        android:background="@drawable/logo_adt" />
 
-                </LinearLayout>
+    <Button
+        android:id="@+id/Logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="134dp"
+        android:text="LOGOUT"
+        android:textColor="#433C03"
+        android:textSize="30dp"
+        android:textStyle="bold" />
 
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                app:cardElevation="6dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:src="@drawable/route"
-                        android:layout_width="120dp"
-                        android:layout_height="120dp" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                app:cardElevation="6dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:src="@drawable/personal_inf"
-                        android:layout_width="120dp"
-                        android:layout_height="120dp" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                app:cardElevation="6dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:src="@drawable/setting"
-                        android:layout_width="120dp"
-                        android:layout_height="120dp" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                app:cardElevation="6dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:src="@drawable/user_manual"
-                        android:layout_width="120dp"
-                        android:layout_height="120dp" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                app:cardElevation="6dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:src="@drawable/logo_adt"
-                        android:layout_width="120dp"
-                        android:layout_height="120dp" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-        </GridLayout>
-
-        <RelativeLayout
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:id="@+id/Logout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:background="@null"
-                android:backgroundTint="#00F1E683"
-                android:text="LOGOUT"
-                android:textColor="#fff6bb"
-                android:textSize="36dp"
-                android:textStyle="bold" />
-        </RelativeLayout>
-
-    </LinearLayout>
-</ScrollView>
+    <TextView
+        android:id="@+id/ADTQRSCAN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="676dp"
+        android:layout_marginEnd="110dp"
+        android:text="ADT QR-SCAN"
+        android:textSize="30dp"
+        android:textColor="#433C03"/>
+</RelativeLayout>
