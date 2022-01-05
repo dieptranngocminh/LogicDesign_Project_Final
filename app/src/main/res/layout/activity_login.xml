@@ -13,18 +13,20 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:layout_marginStart="24dp"
-        android:ems="10"
         android:background="#FFFFF0"
-        android:hint=" Username or phone number"
+        android:ems="10"
+        android:hint=" Email"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColor="#433C03"
         android:textColorHint="#4A4304"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Staysafe"
-        app:layout_constraintVertical_bias="0.32" />
+        app:layout_constraintVertical_bias="0.209"
+        android:layout_alignParentTop="true"/>
 
     <TextView
         android:id="@+id/Staysafe"
@@ -36,7 +38,8 @@
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ADTQRSCAN" />
+        app:layout_constraintTop_toBottomOf="@+id/ADTQRSCAN"
+        android:layout_alignParentTop="true"/>
 
     <TextView
         android:id="@+id/ADTQRSCAN"
@@ -49,7 +52,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.13999999" />
+        app:layout_constraintVertical_bias="0.13999999"
+        android:layout_alignParentTop="true"/>
 
     <EditText
         android:id="@+id/Password"
@@ -68,7 +72,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Username"
-        app:layout_constraintVertical_bias="0.04000002" />
+        app:layout_constraintVertical_bias="0.04000002"
+        android:layout_alignParentTop="true"/>
 
     <Button
         android:id="@+id/button_Login"
@@ -86,7 +91,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Password" />
+        app:layout_constraintTop_toBottomOf="@+id/Password"
+        android:layout_alignParentTop="true"/>
 
     <TextView
         android:id="@+id/create_new_account"
@@ -97,7 +103,8 @@
         android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_Login" />
+        app:layout_constraintTop_toBottomOf="@+id/button_Login"
+        android:layout_alignParentTop="true"/>
 
     <ImageView
         android:id="@+id/hcmut_logo"
@@ -108,7 +115,8 @@
         app:layout_constraintHorizontal_bias="0.398"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/create_new_account"
-        app:srcCompat="@drawable/logo_hcmut" />
+        app:srcCompat="@drawable/logo_hcmut"
+        android:layout_alignParentTop="true"/>
 
     <ImageView
         android:id="@+id/adt_logo"
@@ -119,7 +127,8 @@
         app:layout_constraintHorizontal_bias="0.603"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/create_new_account"
-        app:srcCompat="@drawable/logo_adt" />
+        app:srcCompat="@drawable/logo_adt"
+        android:layout_alignParentTop="true"/>
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -130,5 +139,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_alignParentTop="true"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
