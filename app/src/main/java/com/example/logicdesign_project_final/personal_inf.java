@@ -28,7 +28,7 @@ public class personal_inf extends AppCompatActivity {
 
         user = FirebaseAuth.getInstance().getCurrentUser();
         reference = FirebaseDatabase.getInstance().getReference("Users");
-        userID = user.getEmail();
+        userID = user.getUid();
 
         final TextView FullnameTextview = (TextView)findViewById(R.id.Fullname);
         final TextView DobTextview = (TextView)findViewById(R.id.Dob);
@@ -41,16 +41,16 @@ public class personal_inf extends AppCompatActivity {
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                User userProfile = snapshot.getValue(User.class);
+                UserHelper userProfile = snapshot.getValue(UserHelper.class);
 
                 if(userProfile != null){
-                    String Fullname = userProfile.Fullname;
-                    String Dob = userProfile.Dob;
-                    String StudentID = userProfile.StudentID;
-                    String Email = userProfile.Email;
-                    String Phonenumber = userProfile.Phonenumber;
+                    String Fullname = userProfile.fullname;
+                    String Dob = userProfile.DoB;
+                    String StudentID = userProfile.studentID;
+                    String Email = userProfile.email;
+                    String Phonenumber = userProfile.phone;
                     String ID = userProfile.ID;
-                    String Password = userProfile.Password;
+                    String Password = userProfile.password;
 
                     FullnameTextview.setText(Fullname);
                     DobTextview.setText(Dob);
