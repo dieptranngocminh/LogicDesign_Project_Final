@@ -10,7 +10,23 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical" />
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/Profile"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="674dp"
+            android:layout_marginEnd="150dp"
+            android:layout_marginStart="144dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="serif"
+            android:text="PROFILE"
+            android:textColor="#433C03"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
 
     <TextView
         android:id="@+id/FullnameTitle"
@@ -165,6 +181,7 @@
         android:text="Password"
         android:textSize="23dp"
         android:textStyle="bold"
+        android:textColor="#433C03"
         app:layout_constraintLeft_toLeftOf="@+id/ID"
         app:layout_constraintTop_toBottomOf="@+id/IDTitle" />
 

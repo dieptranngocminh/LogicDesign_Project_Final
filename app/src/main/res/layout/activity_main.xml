@@ -112,9 +112,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="676dp"
-        android:layout_marginEnd="110dp"
+        android:layout_marginBottom="674dp"
+        android:layout_marginEnd="105dp"
+        android:fontFamily="serif"
         android:text="ADT QR-SCAN"
-        android:textSize="30dp"
-        android:textColor="#433C03"/>
+        android:textColor="#433C03"
+        android:textSize="30dp" />
 </RelativeLayout>
