@@ -35,9 +35,9 @@ public class qr_scanner extends AppCompatActivity {
         codeScanner = new CodeScanner(this, codeScannerView);
 
         // Firebase
-//        mAuth = FirebaseAuth.getInstance();
-//        reference = FirebaseDatabase.getInstance().getReference("Users");
-//        FirebaseUser user = mAuth.getCurrentUser();
+        mAuth = FirebaseAuth.getInstance();
+        reference = FirebaseDatabase.getInstance().getReference("Users");
+        FirebaseUser user = mAuth.getCurrentUser();
 
         codeScanner.setDecodeCallback(new DecodeCallback() {
             @Override
