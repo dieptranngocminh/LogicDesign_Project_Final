@@ -16,14 +16,17 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class Setting extends AppCompatActivity {
 
     Button deleteaccount;
 
-    FirebaseAuth firebaseAuth;
-    FirebaseUser firebaseUser;
+    private FirebaseUser user;
+    private DatabaseReference reference;
 
+    private String userID;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +34,12 @@ public class Setting extends AppCompatActivity {
 
         Button changeprfbtn = (Button)findViewById(R.id.changeprofile);
 
+
         deleteaccount = findViewById(R.id.deleteaccount);
+    //Firebase
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        reference = FirebaseDatabase.getInstance().getReference("Users");
+        userID = user.getUid();
 
         deleteaccount.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,10 +50,13 @@ public class Setting extends AppCompatActivity {
                 dialog.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        reference.child(userID).removeValue();
                         FirebaseAuth.getInstance().getCurrentUser().delete().addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
                                 if(task.isSuccessful()){
+
+
                                     Toast.makeText(Setting.this,"Account Deleted", Toast.LENGTH_LONG).show();
                                     Intent intent = new Intent(Setting.this,Login.class);
                                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
