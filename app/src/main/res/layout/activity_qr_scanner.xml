@@ -4,20 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background4"
+    android:background="@drawable/background_yellow"
     tools:context=".qr_scanner">
 
     <com.budiyev.android.codescanner.CodeScannerView
         android:id="@+id/scanner_view"
         android:layout_width="match_parent"
         android:layout_height="350dp"
-        android:layout_marginTop="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
         app:autoFocusButtonColor="#433C03"
         app:autoFocusButtonVisible="true"
         app:flashButtonColor="#433C03"
         app:flashButtonVisible="true"
-        app:frameThickness="10dp"
-        app:maskColor="#dbc18d" />
+        app:maskColor="#ffffe0" />
 
     <TextView
         android:id="@+id/tv_textview"
@@ -41,7 +41,7 @@
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/tv_textview"
         android:layout_marginEnd="220dp"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="230dp"
         app:srcCompat="@drawable/logo_hcmut" />
 
     <ImageView
@@ -51,7 +51,7 @@
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/tv_textview"
         android:layout_marginEnd="140dp"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="230dp"
         app:srcCompat="@drawable/logo_adt" />
 
 </RelativeLayout>

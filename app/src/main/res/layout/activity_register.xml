@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background4"
+    android:background="@drawable/background_yellow"
     tools:context=".Register">
 
     <TextView
@@ -31,7 +31,7 @@
         android:background="@null"
         android:backgroundTint="#00F1E683"
         android:text="REGISTER"
-        android:textColor="#fff6bb"
+        android:textColor="#433C03"
         android:textSize="32dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,7 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:layout_marginStart="24dp"
-        android:background="#FFFFF0"
+        android:background="#f0efe0"
         android:ems="10"
         android:hint=" Phone number"
         android:inputType="textPersonName"
@@ -70,7 +70,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Email"
-        app:layout_constraintVertical_bias="0.027" />
+        app:layout_constraintVertical_bias="0.054" />
 
     <EditText
         android:id="@+id/ID"
@@ -78,7 +78,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:layout_marginStart="24dp"
-        android:background="#FFFFF0"
+        android:background="#f0efe0"
         android:ems="10"
         android:hint=" ID"
         android:inputType="textPersonName"
@@ -98,7 +98,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:layout_marginStart="24dp"
-        android:background="#FFFFF0"
+        android:background="#f0efe0"
         android:ems="10"
         android:hint=" Full name"
         android:inputType="textPersonName"
@@ -118,7 +118,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:layout_marginStart="24dp"
-        android:background="#FFFFF0"
+        android:background="#f0efe0"
         android:ems="10"
         android:hint=" Student ID"
         android:inputType="textPersonName"
@@ -130,7 +130,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Dob"
-        app:layout_constraintVertical_bias="0.034" />
+        app:layout_constraintVertical_bias="0.042" />
 
     <TextView
         android:id="@+id/createnewaccount"
@@ -151,7 +151,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:layout_marginStart="24dp"
-        android:background="#FFFFF0"
+        android:background="#f0efe0"
         android:ems="10"
         android:hint=" Password"
         android:inputType="textPersonName"
@@ -171,7 +171,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:layout_marginStart="24dp"
-        android:background="#FFFFF0"
+        android:background="#f0efe0"
         android:ems="10"
         android:hint=" Email"
         android:inputType="textPersonName"
@@ -191,7 +191,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:layout_marginStart="24dp"
-        android:background="#FFFFF0"
+        android:background="#f0efe0"
         android:ems="10"
         android:hint=" Date of birth"
         android:inputType="textPersonName"
