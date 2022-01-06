@@ -14,14 +14,14 @@
 
         <TextView
             android:id="@+id/Profile"
-            android:layout_width="150dp"
+            android:layout_width="288dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="674dp"
             android:layout_marginEnd="150dp"
-            android:layout_marginStart="136dp"
+            android:layout_marginStart="64dp"
             android:layout_marginTop="20dp"
             android:fontFamily="serif"
-            android:text="PROFILE"
+            android:text="CHANGE PROFILE"
             android:textColor="#433C03"
             android:textSize="30dp"
             android:textStyle="bold" />
@@ -38,8 +38,8 @@
         android:textColor="#433C03"
         android:textSize="23dp"
         android:textStyle="bold" />
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constrintLeft_toLeftOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constrintLeft_toLeftOf="parent"-->
 
 
     <TextView
