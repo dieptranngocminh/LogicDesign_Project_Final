@@ -41,6 +41,11 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         editTextPassword=(EditText) findViewById(R.id.Password);
 
         mAuth =FirebaseAuth.getInstance();
+
+        FirebaseUser user =  mAuth.getCurrentUser();
+        if (user != null){
+            startActivity(new Intent(Login.this, MainActivity.class));
+        }
     }
 
 
