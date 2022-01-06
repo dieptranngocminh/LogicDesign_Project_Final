@@ -16,6 +16,7 @@
         app:autoFocusButtonVisible="true"
         app:flashButtonColor="#433C03"
         app:flashButtonVisible="true"
+        app:frameThickness="10dp"
         app:maskColor="#dbc18d" />
 
     <TextView
