@@ -121,11 +121,11 @@ public class Register extends AppCompatActivity {
 
                             //Get Reference
                             rootNode = FirebaseDatabase.getInstance();
-                            reference = rootNode.getReference("1952168");
+                            reference = rootNode.getReference("Users");
 
                             UserHelper userHelper= new UserHelper(fullname,DoB,studentID,email,password,phone,ID);
 
-                            reference.setValue(userHelper);
+                            reference.child(user.getUid()).setValue(userHelper);
                             Log.d("Regiter database"," Success Add New");
 
                             startActivity(new Intent(getApplicationContext(),MainActivity.class));

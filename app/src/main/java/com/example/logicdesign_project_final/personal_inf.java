@@ -28,7 +28,7 @@ public class personal_inf extends AppCompatActivity {
 
         user = FirebaseAuth.getInstance().getCurrentUser();
         reference = FirebaseDatabase.getInstance().getReference("Users");
-        userID = user.getUid();
+        userID = user.getEmail();
 
         final TextView FullnameTextview = (TextView)findViewById(R.id.Fullname);
         final TextView DobTextview = (TextView)findViewById(R.id.Dob);
