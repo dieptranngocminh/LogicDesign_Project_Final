@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,11 +29,13 @@ public class Register extends AppCompatActivity {
     FirebaseAuth fAuth;
     ProgressBar progessBar;
 
+    FirebaseDatabase rootNode;
+    DatabaseReference reference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        mFullName=findViewById(R.id.Fullname);
+        mFullName = findViewById(R.id.Fullname);
         mEmail=findViewById(R.id.Email);
         mPassWord=findViewById(R.id.password);
         mPhone=findViewById(R.id.Phonenumber);
@@ -60,7 +63,24 @@ public class Register extends AppCompatActivity {
             public void onClick(View view) {
                 String email = mEmail.getText().toString().trim();
                 String password = mPassWord.getText().toString().trim();
+                String fullname = mFullName.getText().toString().trim();
+                String DoB = mDob.getText().toString().trim();
+                String phone = mPhone.getText().toString().trim();
+                String studentID = mStudentID.getText().toString().trim();
+                String ID = mID.getText().toString().trim();
 
+                if(fullname.isEmpty() ){
+                    mFullName.setError("Full name is Required.");
+                    return;
+                }
+                if(DoB.isEmpty()){
+                    mDob.setError("Day of Birth is Required.");
+                    return;
+                }
+                if(studentID.isEmpty() ){
+                    mStudentID.setError("Student ID is Required.");
+                    return;
+                }
                 if(TextUtils.isEmpty((email))){
                     mEmail.setError("Email is Required.");
                     return;
@@ -74,6 +94,18 @@ public class Register extends AppCompatActivity {
                     return;
                 }
 
+                if(ID.isEmpty() ){
+                    mID.setError("Your ID is Required.");
+                    return;
+                }
+
+
+                if(phone.isEmpty() ){
+                    mPhone.setError("Phone number is Required.");
+                    return;
+                }
+
+
                 progessBar.setVisibility(View.VISIBLE);
 
 
@@ -85,17 +117,24 @@ public class Register extends AppCompatActivity {
                         if(task.isSuccessful()){
                             FirebaseUser user = fAuth.getCurrentUser();
                             Toast.makeText(Register.this, "User Created.",Toast.LENGTH_SHORT).show();
+                            // Write USER to the database
+
+                            //Get Reference
+                            rootNode = FirebaseDatabase.getInstance();
+                            reference = rootNode.getReference("1952168");
+
+                            UserHelper userHelper= new UserHelper(fullname,DoB,studentID,email,password,phone,ID);
+
+                            reference.setValue(userHelper);
+                            Log.d("Regiter database"," Success Add New");
+
                             startActivity(new Intent(getApplicationContext(),MainActivity.class));
                         }else{
                             Toast.makeText(Register.this, "Error !" + task.getException().getMessage(),Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
-//                // Write a message to the database
-                FirebaseDatabase database = FirebaseDatabase.getInstance("https://adt-qrscan-default-rtdb.firebaseio.com/");
-                DatabaseReference myRef = database.getReference("users");
-
-                myRef.setValue("Hello, World!");
+//
             }
         });
     }
