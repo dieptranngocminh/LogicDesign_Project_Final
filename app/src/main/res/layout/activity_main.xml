@@ -11,96 +11,74 @@
 
     <Button
         android:id="@+id/qrscanner"
-        android:layout_width="135dp"
-        android:layout_height="135dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginBottom="515dp"
+        android:layout_marginBottom="495dp"
         android:layout_marginEnd="235dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="79dp"
-        android:background="@drawable/qr_code" />
+        android:background="@drawable/qr_scan" />
 
     <Button
         android:id="@+id/route"
-        android:layout_width="135dp"
-        android:layout_height="135dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginBottom="515dp"
+        android:layout_marginBottom="495dp"
         android:layout_marginEnd="45dp"
-        android:layout_marginStart="235dp"
-        android:layout_marginTop="79dp"
         android:background="@drawable/route" />
 
     <Button
         android:id="@+id/personalinf"
-        android:layout_width="135dp"
-        android:layout_height="135dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginBottom="330dp"
+        android:layout_marginBottom="312dp"
         android:layout_marginEnd="235dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="269dp"
         android:background="@drawable/personal_inf" />
 
     <Button
         android:id="@+id/setting"
-        android:layout_width="135dp"
-        android:layout_height="135dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginBottom="330dp"
+        android:layout_marginBottom="312dp"
         android:layout_marginEnd="45dp"
-        android:layout_marginStart="235dp"
-        android:layout_marginTop="269dp"
         android:background="@drawable/setting" />
 
     <Button
         android:id="@+id/usermanual"
-        android:layout_width="135dp"
-        android:layout_height="135dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginBottom="144dp"
+        android:layout_marginBottom="126dp"
         android:layout_marginEnd="235dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="455dp"
         android:background="@drawable/user_manual" />
 
     <Button
         android:id="@+id/aboutus"
-        android:layout_width="135dp"
-        android:layout_height="135dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginBottom="144dp"
+        android:layout_marginBottom="126dp"
         android:layout_marginEnd="45dp"
-        android:layout_marginStart="235dp"
-        android:layout_marginTop="455dp"
-        android:background="@drawable/logo_adt" />
+        android:background="@drawable/developer" />
 
     <Button
         android:id="@+id/Logout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="20dp"
         android:layout_marginEnd="134dp"
+        android:background="#eeecc0"
         android:text="LOGOUT"
         android:textColor="#433C03"
         android:textSize="30dp"

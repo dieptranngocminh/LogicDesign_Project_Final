@@ -1,6 +1,199 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background_yellow"
+    tools:context=".personal_inf">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/Profile"
+            android:layout_width="288dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="674dp"
+            android:layout_marginEnd="150dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="serif"
+            android:text="CHANGE PROFILE"
+            android:textColor="#433C03"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/FullnameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="65dp"
+        android:text="Full name"
+        android:textColor="#433C03"
+        android:textSize="23dp"
+        android:textStyle="bold" />
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constrintLeft_toLeftOf="parent"-->
+
+
+    <TextView
+        android:id="@+id/Fullname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="105dp"
+        android:textSize="23dp"
+        android:textColor="#433C03"
+        app:layout_constraintLeft_toLeftOf="@+id/FullnameTitle"
+        app:layout_constraintTop_toBottomOf="@+id/FullnameTitle" />
+
+    <TextView
+        android:id="@+id/DobTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="151dp"
+        android:text="Date of Birth"
+        android:textColor="#433C03"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@+id/Fullname"
+        app:layout_constraintTop_toBottomOf="@+id/FullnameTitle" />
+
+    <TextView
+        android:id="@+id/Dob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="192dp"
+        android:textSize="23dp"
+        android:textColor="#433C03"
+        app:layout_constraintLeft_toLeftOf="@+id/Fullname"
+        app:layout_constraintTop_toBottomOf="@+id/DobTitle" />
+
+    <TextView
+        android:id="@+id/StudentIDTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="238dp"
+        android:text="Student ID"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        android:textColor="#433C03"
+        app:layout_constraintLeft_toLeftOf="@+id/Dob"
+        app:layout_constraintTop_toBottomOf="@+id/DobTitle" />
+
+    <TextView
+        android:id="@+id/StudentID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="278dp"
+        android:textSize="23dp"
+        android:textColor="#433C03"
+        app:layout_constraintLeft_toLeftOf="@+id/Dob"
+        app:layout_constraintTop_toBottomOf="@+id/StudentIDTitle" />
+
+    <TextView
+        android:id="@+id/EmailTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="326dp"
+        android:text="Email"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        android:textColor="#433C03"
+        app:layout_constraintLeft_toLeftOf="@+id/StudentIDTitle"
+        app:layout_constraintTop_toBottomOf="@+id/StudentID" />
+
+    <TextView
+        android:id="@+id/Email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="365dp"
+        android:textSize="23dp"
+        android:textColor="#433C03"
+        app:layout_constraintLeft_toLeftOf="@+id/StudentID"
+        app:layout_constraintTop_toBottomOf="@+id/EmailTitle" />
+
+    <TextView
+        android:id="@+id/PhonenumberTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="412dp"
+        android:text="Phone number"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        android:textColor="#433C03"
+        app:layout_constraintLeft_toLeftOf="@+id/EmailTitle"
+        app:layout_constraintTop_toBottomOf="@+id/Email" />
+
+    <TextView
+        android:id="@+id/Phonenumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="452dp"
+        android:textSize="23dp"
+        android:textColor="#433C03"
+        app:layout_constraintLeft_toLeftOf="@+id/Email"
+        app:layout_constraintTop_toBottomOf="@+id/PhonenumberTitle" />
+
+    <TextView
+        android:id="@+id/IDTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="500dp"
+        android:text="ID"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        android:textColor="#433C03"
+        app:layout_constraintLeft_toLeftOf="@+id/PhonenumberTitle"
+        app:layout_constraintTop_toBottomOf="@+id/Phonenumber" />
+
+    <TextView
+        android:id="@+id/ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="540dp"
+        android:textSize="23dp"
+        app:layout_constraintLeft_toLeftOf="@+id/Phonenumber"
+        app:layout_constraintTop_toBottomOf="@+id/IDTitle" />
+
+    <TextView
+        android:id="@+id/PasswordTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="587dp"
+        android:text="Password"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        android:textColor="#433C03"
+        app:layout_constraintLeft_toLeftOf="@+id/ID"
+        app:layout_constraintTop_toBottomOf="@+id/IDTitle" />
+
+    <TextView
+        android:id="@+id/Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="625dp"
+        android:textSize="23dp"
+        android:textColor="#433C03"
+        app:layout_constraintLeft_toLeftOf="@+id/PasswordTitle"
+        app:layout_constraintTop_toBottomOf="@+id/ID" />
+
+</RelativeLayout>
