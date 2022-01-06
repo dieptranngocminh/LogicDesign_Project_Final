@@ -35,9 +35,9 @@ public class qr_scanner extends AppCompatActivity {
         codeScanner = new CodeScanner(this, codeScannerView);
 
         // Firebase
-        mAuth = FirebaseAuth.getInstance();
-        reference = FirebaseDatabase.getInstance().getReference("Users");
-        FirebaseUser user = mAuth.getCurrentUser();
+//        mAuth = FirebaseAuth.getInstance();
+//        reference = FirebaseDatabase.getInstance().getReference("Users");
+//        FirebaseUser user = mAuth.getCurrentUser();
 
         codeScanner.setDecodeCallback(new DecodeCallback() {
             @Override
@@ -45,12 +45,12 @@ public class qr_scanner extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        String code = result.getText();
-                        if(checkFormat(code))  {txt.setText(code);}
-                        else{
-                            txt.setText("WRONG FORMAT");
-                        }
-
+//                        String code = result.getText();
+//                        if(checkFormat(code))  {txt.setText(code);}
+//                        else{
+//                            txt.setText("WRONG FORMAT");
+//                        }
+                        txt.setText(result.getText());
 
 
                     }
@@ -70,17 +70,17 @@ public class qr_scanner extends AppCompatActivity {
         codeScanner.startPreview();
     }
 
-    private boolean checkFormat(String code){
-        if (code.indexOf("!") == 0 && code.lastIndexOf("#") == code.charAt(code.length()-1) ){
-            return true;
-        }
-        return false;
-    }
-    private String ProcessCode(String code){
-        ///Slpit data
-        code.replace("!","");
-        code.replace("#","");
-    return code;
-    }
+//    private boolean checkFormat(String code){
+//        if (code.indexOf("!") == 0 && code.lastIndexOf("#") == code.charAt(code.length()-1) ){
+//            return true;
+//        }
+//        return false;
+//    }
+//    private String ProcessCode(String code){
+//        ///Slpit data
+//        code.replace("!","");
+//        code.replace("#","");
+//    return code;
+//    }
 
 }
