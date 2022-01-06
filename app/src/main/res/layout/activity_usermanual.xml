@@ -7,6 +7,4 @@
     android:background="@drawable/user_manual_layout"
     tools:context=".Usermanual">
 
-    <include layout="@layout/toolbar"/>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

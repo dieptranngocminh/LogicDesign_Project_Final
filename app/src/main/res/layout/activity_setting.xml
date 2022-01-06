@@ -7,5 +7,4 @@
     android:background="@drawable/background4"
     tools:context=".Setting">
 
-    <include layout="@layout/toolbar"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

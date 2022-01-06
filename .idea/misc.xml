@@ -3,17 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/IOT/LogicDesign_Project_Final/app/src/main/res/layout/aboutus.xml" value="0.10054347826086957" />
-        <entry key="..\:/IOT/LogicDesign_Project_Final/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/IOT/LogicDesign_Project_Final/app/src/main/res/layout/activity_login.xml" value="0.13020833333333334" />
         <entry key="..\:/IOT/LogicDesign_Project_Final/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
-        <entry key="..\:/IOT/LogicDesign_Project_Final/app/src/main/res/layout/activity_personal_inf.xml" value="0.2" />
+        <entry key="..\:/IOT/LogicDesign_Project_Final/app/src/main/res/layout/activity_personal_inf.xml" value="0.12760416666666666" />
         <entry key="..\:/IOT/LogicDesign_Project_Final/app/src/main/res/layout/activity_qr_scanner.xml" value="0.1" />
         <entry key="..\:/IOT/LogicDesign_Project_Final/app/src/main/res/layout/activity_register.xml" value="0.264" />
-        <entry key="..\:/IOT/LogicDesign_Project_Final/app/src/main/res/layout/activity_route.xml" value="0.14427083333333332" />
-        <entry key="..\:/IOT/LogicDesign_Project_Final/app/src/main/res/layout/activity_setting.xml" value="0.14427083333333332" />
-        <entry key="..\:/IOT/LogicDesign_Project_Final/app/src/main/res/layout/activity_usermanual.xml" value="0.10054347826086957" />
-        <entry key="..\:/IOT/LogicDesign_Project_Final/app/src/main/res/layout/toolbar.xml" value="0.14427083333333332" />
-        <entry key="..\:/Users/84967/AndroidStudioProjects/LogicDesign_Project_Final/app/src/main/res/layout/aboutus.xml" value="0.1" />
+        <entry key="..\:/Users/84967/AndroidStudioProjects/LogicDesign_Project_Final/app/src/main/res/layout/aboutus.xml" value="0.22" />
         <entry key="..\:/Users/84967/AndroidStudioProjects/LogicDesign_Project_Final/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Users/84967/AndroidStudioProjects/LogicDesign_Project_Final/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/84967/AndroidStudioProjects/LogicDesign_Project_Final/app/src/main/res/layout/activity_personal_inf.xml" value="0.3333333333333333" />

@@ -7,6 +7,5 @@
     android:background="@drawable/background4"
     tools:context=".Route">
 
-    <include layout="@layout/toolbar"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
