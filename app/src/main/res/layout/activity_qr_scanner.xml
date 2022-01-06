@@ -17,7 +17,9 @@
         app:autoFocusButtonVisible="true"
         app:flashButtonColor="#433C03"
         app:flashButtonVisible="true"
-        app:maskColor="#ffffe0" />
+        app:maskColor="#ffffe0"
+        app:frameThickness="20dp"
+        />
 
     <TextView
         android:id="@+id/tv_textview"
