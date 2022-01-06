@@ -32,6 +32,7 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="15dp"
         android:text="SCAN HERE"
+        android:fontFamily="serif"
         android:textColor="#433C03"
         android:textSize="35dp"
         android:textStyle="bold" />
