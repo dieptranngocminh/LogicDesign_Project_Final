@@ -12,9 +12,10 @@
         android:theme="@style/Theme.LogicDesign_Project_Final">
         <activity
             android:name=".Setting"
+            android:label="Setting"
             android:parentActivityName=".MainActivity"
-            android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
+            android:exported="false"/>
+<!--            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>-->
         <activity
             android:name=".Route"
             android:parentActivityName=".MainActivity"
@@ -33,8 +34,8 @@
         <activity
             android:name=".Usermanual"
             android:parentActivityName=".MainActivity"
-            android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
+            android:exported="false"/>
+<!--            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>-->
         <activity
             android:name=".MainActivity"
             android:exported="false"
