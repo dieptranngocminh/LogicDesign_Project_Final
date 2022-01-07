@@ -61,13 +61,13 @@ public class Changeprofile extends AppCompatActivity {
         password.setText(PASSWORD);
     }
 
-    public void update(View view){
-        if(isNameChanged() || isDobChanged())
-    }
-
-    private boolean isDobChanged() {
-    }
-
-    private boolean isNameChanged() {
-    }
+//    public void update(View view){
+//        if(isNameChanged() || isDobChanged());
+//    }
+//
+//    private boolean isDobChanged() {
+//    }
+//
+//    private boolean isNameChanged() {
+//    }
 }

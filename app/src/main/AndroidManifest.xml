@@ -26,21 +26,23 @@
             android:name=".Route"
             android:exported="false"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+            android:label="Route" />
         <activity
             android:name=".Register"
             android:exported="false"
             android:parentActivityName=".Login"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+            android:label="Register" />
         <activity
             android:name=".personal_inf"
             android:exported="false"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+            android:label="Personal Information"
+             />
         <activity
             android:name=".Usermanual"
             android:exported="false"
-            android:parentActivityName=".MainActivity" /> <!-- android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/> -->
+            android:parentActivityName=".MainActivity"
+            android:label="User Manual"/> <!-- android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/> -->
         <activity
             android:name=".MainActivity"
             android:exported="false"
@@ -49,7 +51,8 @@
             android:name=".qr_scanner"
             android:exported="false"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+            android:label="QR Scanner" />
+            android:label="QR Scanner" />
         <activity
             android:name=".Login"
             android:exported="true"
