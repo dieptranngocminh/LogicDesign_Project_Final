@@ -8,27 +8,34 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class Changeprofile extends AppCompatActivity {
 
-    TextView fullname;
-    TextView dob;
-    TextView studentid;
-    TextView email;
-    TextView phonenumber;
-    TextView id;
-    TextView password;
+    TextInputLayout fullname;
+    TextInputLayout dob;
+    TextInputLayout studentid;
+    TextInputLayout email;
+    TextInputLayout phonenumber;
+    TextInputLayout id;
+    TextInputLayout password;
 
     String NAME, DOB, STUDENTID, EMAIL, PHONENO, ID, PASSWORD;
+
+    DatabaseReference reference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_changeprofile);
+
+        reference = FirebaseDatabase.getInstance().getReference("Users");
 
         fullname = findViewById(R.id.Fullname);
         dob = findViewById(R.id.Dob);
@@ -52,7 +59,7 @@ public class Changeprofile extends AppCompatActivity {
         ID = intent.getStringExtra("id");
         PASSWORD = intent.getStringExtra("password");
 
-        fullname.setText(NAME);
+        fullname.getEditText().getText(NAME);
         dob.setText(DOB);
         studentid.setText(STUDENTID);
         email.setText(EMAIL);
@@ -62,12 +69,28 @@ public class Changeprofile extends AppCompatActivity {
     }
 
     public void update(View view){
-        if(isNameChanged() || isDobChanged())
+        if(isNameChanged() || isDobChanged()){
+            Toast.makeText(this,"Data has been updated", Toast.LENGTH_LONG).show();
+        }
     }
 
     private boolean isDobChanged() {
+        if(!DOB.equals(dob.getEditText().getText().toString())){
+            reference.child(NAME).child("doB").setValue(fullname.getEditText().getText().toString());
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     private boolean isNameChanged() {
+        if(!NAME.equals(fullname.getEditText().getText().toString())){
+            reference.child(NAME).child("fullName").setValue(fullname.getEditText().getText().toString());
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 }
