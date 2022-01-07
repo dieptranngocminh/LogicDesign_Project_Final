@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         routebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent int2=new Intent(MainActivity.this, Route.class);
+                Intent int2=new Intent(MainActivity.this, route_history.class);
                 startActivity(int2);
             }
         });

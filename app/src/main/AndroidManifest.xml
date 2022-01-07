@@ -13,21 +13,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LogicDesign_Project_Final">
-        <activity
-            android:name=".Adapter"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".Adapter"-->
+<!--            android:exported="false" />-->
+<!--        <activity-->
+<!--            android:name=".route_history"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".route_history"
-            android:exported="false" />
-        <activity
-            android:name=".Route"
             android:exported="false"
             android:label="Route"
             android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".Route1"
-            android:exported="false"
-            tools:ignore="Instantiatable" />
+<!--        <activity-->
+<!--            android:name=".route_history"-->
+<!--            android:exported="false"-->
+<!--            tools:ignore="Instantiatable" />-->
         <activity
             android:name=".Changeprofile"
             android:exported="false"

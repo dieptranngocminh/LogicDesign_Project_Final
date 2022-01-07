@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -19,7 +21,10 @@ import java.util.ArrayList;
 public class route_history extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    DatabaseReference database;
+    FirebaseAuth mAuth;
+    FirebaseDatabase  rootNode;
+    DatabaseReference reference;
+    FirebaseUser user;
     Adapter adapter;
     ArrayList<PlacesHelper> list;
 
@@ -31,15 +36,20 @@ public class route_history extends AppCompatActivity {
         setContentView(R.layout.activity_route);
 
         recyclerView = findViewById(R.id.route_history);
-        database = FirebaseDatabase.getInstance().getReference("Users/H4d5xgfX4RhqvpYCsvx5UWNJS8u2/places:");
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         list = new ArrayList<>();
         adapter = new Adapter(this, list);
         recyclerView.setAdapter(adapter);
+        //Firebase
+        mAuth = FirebaseAuth.getInstance();
+        user = mAuth.getCurrentUser();
+        rootNode = FirebaseDatabase.getInstance();
+        reference = rootNode.getReference("Users");
 
-        database.addValueEventListener(new ValueEventListener() {
+
+        reference.child(user.getUid()).child("places").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 

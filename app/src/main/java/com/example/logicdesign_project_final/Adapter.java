@@ -33,7 +33,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
         PlacesHelper placesHelper = list.get(position);
         holder.building.setText(placesHelper.getbuilding());
         holder.room.setText(placesHelper.getroom());
-        holder.time.setText(placesHelper.getroom());
+        holder.time.setText(placesHelper.gettime());
     }
 
     @Override
