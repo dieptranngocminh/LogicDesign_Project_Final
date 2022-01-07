@@ -105,7 +105,7 @@ public class Register extends AppCompatActivity {
                     return;
                 }
 
-
+                progessBar.getTop();
                 progessBar.setVisibility(View.VISIBLE);
 
 
@@ -128,6 +128,16 @@ public class Register extends AppCompatActivity {
                             reference.child(user.getUid()).setValue(userHelper);
                             Log.d("Regiter database"," Success Add New");
 
+                            user = FirebaseAuth.getInstance().getCurrentUser();
+                            if(user.isEmailVerified()) {
+                                Log.d("Login", "signInWithEmail:success");
+                                //redirect to Main Activity
+
+                            }
+                            else {
+                                user.sendEmailVerification();
+                                Toast.makeText(Register.this, "Check your email to verify !", Toast.LENGTH_SHORT).show();
+                            }
                             startActivity(new Intent(getApplicationContext(),MainActivity.class));
                         }else{
                             Toast.makeText(Register.this, "Error !" + task.getException().getMessage(),Toast.LENGTH_SHORT).show();

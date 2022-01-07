@@ -12,19 +12,19 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/Profile"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="674dp"
-            android:layout_marginEnd="150dp"
-            android:layout_marginStart="136dp"
-            android:layout_marginTop="20dp"
-            android:fontFamily="serif"
-            android:text="PROFILE"
-            android:textColor="#433C03"
-            android:textSize="30dp"
-            android:textStyle="bold" />
+<!--        <TextView-->
+<!--            android:id="@+id/Profile"-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="674dp"-->
+<!--            android:layout_marginEnd="150dp"-->
+<!--            android:layout_marginStart="136dp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:fontFamily="serif"-->
+<!--            android:text="PROFILE"-->
+<!--            android:textColor="#433C03"-->
+<!--            android:textSize="30dp"-->
+<!--            android:textStyle="bold" />-->
     </LinearLayout>
 
 

@@ -53,6 +53,7 @@
 
     <EditText
         android:id="@+id/Password"
+        android:inputType="textPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
@@ -61,7 +62,6 @@
         android:background="#FFFFF0"
         android:hint=" Password"
         android:minHeight="48dp"
-        android:inputType="textPassword"
         android:textColor="#433C03"
         android:textColorHint="#4A4304"
         app:layout_constraintBottom_toBottomOf="parent"

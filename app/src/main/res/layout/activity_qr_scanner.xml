@@ -7,21 +7,21 @@
     android:background="@drawable/background_yellow"
     tools:context=".qr_scanner">
 
-    <TextView
-        android:id="@+id/tv_textview2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_textview"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="25dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="10dp"
-        android:fontFamily="serif"
-        android:text="ROOM STATUS"
-        android:textColor="#433C03"
-        android:textSize="35dp"
-        android:textStyle="bold" />
+<!--    <TextView-->
+<!--        android:id="@+id/tv_textview2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/tv_textview"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginBottom="25dp"-->
+<!--        android:layout_marginEnd="25dp"-->
+<!--        android:layout_marginStart="25dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:fontFamily="serif"-->
+<!--        android:text="ROOM STATUS"-->
+<!--        android:textColor="#433C03"-->
+<!--        android:textSize="35dp"-->
+<!--        android:textStyle="bold" />-->
 
     <com.budiyev.android.codescanner.CodeScannerView
         android:id="@+id/scanner_view"
@@ -49,11 +49,11 @@
         android:layout_marginBottom="25dp"
         android:layout_marginEnd="25dp"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="67dp"
         android:fontFamily="serif"
         android:text="SCAN HERE"
         android:textColor="#433C03"
-        android:textSize="35dp"
+        android:textSize="40dp"
         android:textStyle="bold" />
 
     <ImageView
@@ -61,9 +61,9 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_alignParentEnd="true"
-        android:layout_below="@+id/tv_textview"
+        android:layout_below="@+id/btn_rescan"
         android:layout_marginEnd="220dp"
-        android:layout_marginTop="230dp"
+        android:layout_marginTop="20dp"
         app:srcCompat="@drawable/logo_hcmut" />
 
     <ImageView
@@ -71,9 +71,9 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_alignParentEnd="true"
-        android:layout_below="@+id/tv_textview"
+        android:layout_below="@+id/btn_confirm"
         android:layout_marginEnd="140dp"
-        android:layout_marginTop="230dp"
+        android:layout_marginTop="20dp"
         app:srcCompat="@drawable/logo_adt" />
 
     <Button
@@ -81,11 +81,10 @@
         android:layout_width="120dp"
         android:layout_height="75dp"
         android:layout_alignParentEnd="true"
-        android:layout_below="@+id/tv_textview2"
+        android:layout_below="@+id/tv_textview"
         android:layout_marginEnd="225dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="70dp"
         android:text="RESCAN"
-        android:backgroundTint="#eeecc0"
         android:textSize="20dp" />
 
     <Button
@@ -93,26 +92,25 @@
         android:layout_width="120dp"
         android:layout_height="75dp"
         android:layout_alignParentEnd="true"
-        android:layout_below="@+id/tv_textview2"
+        android:layout_below="@+id/tv_textview"
         android:layout_marginEnd="45dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="70dp"
         android:layout_toStartOf="@id/btn_confirm"
         android:text="CONFIRM"
-        android:backgroundTint="#eeecc0"
         android:textSize="20dp" />
 
     <ProgressBar
         android:id="@+id/progressBar3"
         style="?android:attr/progressBarStyle"
         android:layout_width="260dp"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/tv_textview"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="25dp"
-        android:layout_marginEnd="71dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="74dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="-74dp"
         android:visibility="invisible" />
 
 </RelativeLayout>

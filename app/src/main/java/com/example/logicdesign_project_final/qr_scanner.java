@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,8 +18,10 @@ import com.budiyev.android.codescanner.DecodeCallback;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.zxing.Result;
 
 import java.text.DateFormat;
@@ -27,6 +31,8 @@ import java.util.Calendar;
 
 public class qr_scanner extends AppCompatActivity {
     TextView txt;
+    ProgressBar progressBar;
+
     CodeScanner codeScanner;
     CodeScannerView codeScannerView;
 
@@ -39,6 +45,7 @@ public class qr_scanner extends AppCompatActivity {
     Button btn_rescan,btn_confirm;
     //Code
     String code;
+    String [] split;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,10 +59,17 @@ public class qr_scanner extends AppCompatActivity {
         btn_rescan = findViewById(R.id.btn_rescan);
         btn_confirm =findViewById(R.id.btn_confirm);
 
+        progressBar = findViewById(R.id.progressBar3);
         // Firebase
         mAuth = FirebaseAuth.getInstance();
+//Fire base
+        rootNode = FirebaseDatabase.getInstance();
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        userID = user.getUid();
+        reference = rootNode.getReference("Users").child(userID);
 
-
+        progressBar.setVisibility(View.VISIBLE);
+        txt.setVisibility(View.INVISIBLE);
 
         codeScanner.setDecodeCallback(new DecodeCallback() {
             @Override
@@ -63,11 +77,9 @@ public class qr_scanner extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        code = result.getText();
-                        if(checkFormat(code))  {txt.setText(code);}
-                        else{
-                            txt.setText("WRONG FORMAT");
-                        }
+                        progressBar.setVisibility(View.INVISIBLE);
+                        txt.setVisibility(View.VISIBLE);
+                        code = ProgressCode(result);
 
                         //txt.setText(result.getText());
 
@@ -77,28 +89,38 @@ public class qr_scanner extends AppCompatActivity {
             }
         });
 
+        codeScannerView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                codeScanner.startPreview();
+                progressBar.setVisibility(View.VISIBLE);
+                txt.setVisibility(View.INVISIBLE);
+            }
+        });
         btn_rescan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                progressBar.setVisibility(View.VISIBLE);
+                txt.setVisibility(View.INVISIBLE);
+                codeScanner.startPreview();
+
                 codeScanner.setDecodeCallback(new DecodeCallback() {
                     @Override
                     public void onDecoded(@NonNull Result result) {
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                code = result.getText();
-                                if(checkFormat(code))  {txt.setText(code);}
-                                else{
-                                    txt.setText("WRONG FORMAT");
-                                }
-
-                                //txt.setText(result.getText());
-
+                                progressBar.setVisibility(View.INVISIBLE);
+                                txt.setVisibility(View.VISIBLE);
+                                code = ProgressCode(result);
 
                             }
                         });
                     }
                 });
+
             }
         });
 
@@ -106,15 +128,32 @@ public class qr_scanner extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Take time on phone
-                DateFormat df = new SimpleDateFormat("h:mm a");
+                DateFormat df = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss");
                 String date = df.format(Calendar.getInstance().getTime());
+                Log.d("Time format",date);
+                final String[] last_index = new String[1];
+                PlacesHelper placesHelper = new PlacesHelper(split[0],split[1],date);
 
-                //Fire base
-                user = FirebaseAuth.getInstance().getCurrentUser();
-                reference = FirebaseDatabase.getInstance().getReference("Users");
-                userID = user.getUid();
+                reference.child("places").push().setValue(placesHelper);
+                Log.d("QR",placesHelper.building + placesHelper.time+placesHelper.room);
 
-//                reference.child("places").limitToLast(1)
+                reference.child("places").addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        for(DataSnapshot ds : snapshot.getChildren()) {
+                            String stt = ds.getKey();
+                            Log.d("Places stt", stt);
+
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
+
             }
         });
     }
@@ -130,18 +169,29 @@ public class qr_scanner extends AppCompatActivity {
     }
 
     private boolean checkFormat(String code){
-        if (code.indexOf("!") == 0 && 35 == code.charAt(code.length()-1) ){
-            // ASCII 35 = #
-            return true;
-        }
-        return false;
+        // ASCII 35 = #
+        return code.indexOf("!") == 0 && 35 == code.charAt(code.length() - 1);
     }
     private String ProcessCode(String code){
         ///Slpit data
-        code.replace("!","");
-        code.replace("#","");
+        code = code.replace("!","");
+        code = code.replace("#","");
     return code;
     }
+
+    private String ProgressCode(Result result){
+        String code =result.getText();
+        if(checkFormat(code))  {
+            code = ProcessCode(code);
+            txt.setText(code);
+        }
+        else{
+            txt.setText("WRONG FORMAT");
+        }
+        split = code.split(":");
+        return code;
+    }
+
 //    private boolean CheckBuilding(String building){
 //        rootNode = FirebaseDatabase.getInstance();
 //        reference = rootNode.getReference("Location");
