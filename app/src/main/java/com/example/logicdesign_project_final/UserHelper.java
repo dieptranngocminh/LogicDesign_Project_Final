@@ -1,5 +1,7 @@
 package com.example.logicdesign_project_final;
 
+import android.view.View;
+
 public class UserHelper {
     String fullname, DoB,email, phone, password,studentID,ID;
 
@@ -68,5 +70,9 @@ public class UserHelper {
 
     public void setstudentID(String studentID) {
         this.studentID = studentID;
+    }
+
+    public void update(View view){
+
     }
 }

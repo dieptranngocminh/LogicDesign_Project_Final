@@ -34,7 +34,6 @@ public class Setting extends AppCompatActivity {
 
         Button changeprfbtn = (Button)findViewById(R.id.changeprofile);
 
-
         deleteaccount = findViewById(R.id.deleteaccount);
     //Firebase
         user = FirebaseAuth.getInstance().getCurrentUser();

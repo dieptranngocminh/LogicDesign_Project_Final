@@ -25,13 +25,13 @@
         android:id="@+id/text1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="36dp"
         android:text="Welcome to ADT QR-CAN story,"
         android:textColor="#433C03"
-        android:textSize="16dp"
+        android:textSize="19dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.189"
+        app:layout_constraintHorizontal_bias="0.147"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ADTQRSCAN" />
 
@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:text="Because of the lack of tracking devices during the"
         android:textColor="#433C03"
-        android:textSize="16dp"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.583"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,10 +52,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Covid-19 pandemic. Our team decided to create a"
-        android:textSize="16dp"
         android:textColor="#433C03"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text2" />
 
@@ -64,10 +64,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="system managing data of route of people."
-        android:textSize="16dp"
         android:textColor="#433C03"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintHorizontal_bias="0.113"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text3" />
 
@@ -75,11 +75,11 @@
         android:id="@+id/text5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Our team includes 3 members which are Diep Tran,"
-        android:textSize="16dp"
+        android:text="Our team includes 3 members which are Diep"
         android:textColor="#433C03"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.686"
+        app:layout_constraintHorizontal_bias="0.18"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text4" />
 
@@ -87,10 +87,11 @@
         android:id="@+id/text6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="An Duong, and Trieu Tran. We are studying Computer"
-        android:textSize="16dp"
+        android:text="Tran, An Duong, and Trieu Tran. We are studying"
         android:textColor="#433C03"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text5" />
 
@@ -98,11 +99,11 @@
         android:id="@+id/text7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Engineering at Ho Chi Minh City University of"
-        android:textSize="16dp"
+        android:text="Computer Engineering at Ho Chi Minh City"
         android:textColor="#433C03"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.195"
+        app:layout_constraintHorizontal_bias="0.116"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text6" />
 
@@ -110,11 +111,11 @@
         android:id="@+id/text8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Technology."
+        android:text="University of Technology."
         android:textColor="#433C03"
-        android:textSize="16dp"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintHorizontal_bias="0.042"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text7" />
 
@@ -124,9 +125,9 @@
         android:layout_height="wrap_content"
         android:text="This system is a simple application for users to"
         android:textColor="#433C03"
-        android:textSize="16dp"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text8" />
 
@@ -134,11 +135,11 @@
         android:id="@+id/text10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="check in by scanning QR codes at locations. For the"
+        android:text="check in by scanning QR codes at locations. For"
         android:textColor="#433C03"
-        android:textSize="16dp"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.404"
+        app:layout_constraintHorizontal_bias="0.3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text9" />
 
@@ -146,11 +147,11 @@
         android:id="@+id/text11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="first release, we choose Ho Chi Minh City University of"
+        android:text="the first release, we choose Ho Chi Minh City"
         android:textColor="#433C03"
-        android:textSize="16dp"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.593"
+        app:layout_constraintHorizontal_bias="0.157"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text10" />
 
@@ -158,11 +159,11 @@
         android:id="@+id/text12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Technology for the pilot base."
+        android:text="University of Technology for the pilot base."
         android:textColor="#433C03"
-        android:textSize="16dp"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.094"
+        app:layout_constraintHorizontal_bias="0.123"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text11" />
 
@@ -172,9 +173,9 @@
         android:layout_height="wrap_content"
         android:text="User are lectures and students on campus."
         android:textColor="#433C03"
-        android:textSize="16dp"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.175"
+        app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text12" />
 
@@ -182,11 +183,11 @@
         android:id="@+id/text14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="We place QR codes at A4, B4, C5 buildings so you can"
+        android:text="We place QR codes at A4, B4, C5 buildings so you"
         android:textColor="#433C03"
-        android:textSize="16dp"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.593"
+        app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text13" />
 
@@ -194,11 +195,11 @@
         android:id="@+id/text15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="scan to check your route."
+        android:text="can scan to check your route."
         android:textColor="#433C03"
-        android:textSize="16dp"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.081"
+        app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text14" />
 
@@ -208,9 +209,9 @@
         android:layout_height="wrap_content"
         android:text="We will update this system regularly for the best"
         android:textColor="#433C03"
-        android:textSize="16dp"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintHorizontal_bias="0.656"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text15" />
 
@@ -218,11 +219,11 @@
         android:id="@+id/text17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="version. In the future, we will improve this application"
+        android:text="version. In the future, we will improve this"
         android:textColor="#433C03"
-        android:textSize="16dp"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.578"
+        app:layout_constraintHorizontal_bias="0.095"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text16" />
 
@@ -230,11 +231,11 @@
         android:id="@+id/text18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="to use it widely in many fields such as criminal."
+        android:text="application to use it widely in many fields."
         android:textColor="#433C03"
-        android:textSize="16dp"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.275"
+        app:layout_constraintHorizontal_bias="0.098"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text17" />
 
@@ -242,11 +243,11 @@
         android:id="@+id/text19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="If you have any questions or any feedback, please"
+        android:text="If you have any questions or any feedback,"
         android:textColor="#433C03"
-        android:textSize="16dp"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.573"
+        app:layout_constraintHorizontal_bias="0.287"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text18" />
 
@@ -254,11 +255,11 @@
         android:id="@+id/text20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="feel free to contact us via"
+        android:text="please feel free to contact us via"
         android:textColor="#433C03"
-        android:textSize="16dp"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.094"
+        app:layout_constraintHorizontal_bias="0.058"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text19" />
 
@@ -268,9 +269,9 @@
         android:layout_height="wrap_content"
         android:text="Email: vanoanh070101@gmail.com"
         android:textColor="#433C03"
-        android:textSize="16dp"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.139"
+        app:layout_constraintHorizontal_bias="0.069"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text20" />
 
@@ -278,11 +279,12 @@
         android:id="@+id/text22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:text="@string/linktosite"
         android:textColor="#fff6bb"
-        android:textSize="16dp"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintHorizontal_bias="0.029"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text21" />
 
@@ -293,7 +295,7 @@
         android:layout_marginTop="4dp"
         android:text="We hope that you are satisfied with ADT QR-SCAN."
         android:textColor="#433C03"
-        android:textSize="16dp"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.648"
         app:layout_constraintStart_toStartOf="parent"
@@ -303,13 +305,13 @@
         android:id="@+id/text24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:text="Thank you and stay safe!"
         android:textColor="#433C03"
-        android:textSize="16dp"
+        android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintHorizontal_bias="0.099"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text23" />
 
