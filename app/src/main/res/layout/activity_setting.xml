@@ -70,7 +70,7 @@
         android:id="@+id/textView3"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:background="@drawable/logo_adt"
+        android:background="@drawable/logo_adt2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.62"
