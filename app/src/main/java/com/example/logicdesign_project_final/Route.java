@@ -1,14 +1,18 @@
 package com.example.logicdesign_project_final;
 
-import androidx.appcompat.app.AppCompatActivity;
+public class Route {
 
-import android.os.Bundle;
+    String building, room, time;
 
-public class Route extends AppCompatActivity {
+    public String getBuilding() {
+        return building;
+    }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_route);
+    public String getRoom() {
+        return room;
+    }
+
+    public String getTime() {
+        return time;
     }
 }
