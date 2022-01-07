@@ -62,9 +62,11 @@ public class qr_scanner extends AppCompatActivity {
         // Firebase
         mAuth = FirebaseAuth.getInstance();
 //Fire base
+        rootNode = FirebaseDatabase.getInstance();
         user = FirebaseAuth.getInstance().getCurrentUser();
-        reference = FirebaseDatabase.getInstance().getReference("Users");
         userID = user.getUid();
+        reference = rootNode.getReference("Users").child(userID);
+
 
 
         codeScanner.setDecodeCallback(new DecodeCallback() {
@@ -116,27 +118,37 @@ public class qr_scanner extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Take time on phone
-                DateFormat df = new SimpleDateFormat("h:mm a");
+                DateFormat df = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss");
                 String date = df.format(Calendar.getInstance().getTime());
                 Log.d("Time format",date);
+                final String[] last_index = new String[1];
+                PlacesHelper placesHelper = new PlacesHelper("A2","212",date);
 
+                //reference.child("new").push().setValue(placesHelper);
+                Log.d("QR",placesHelper.building + placesHelper.time+placesHelper.room);
 
+//                reference.child("places").limitToLast(1).addValueEventListener(new ValueEventListener() {
+//                    @Override
+//                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                        for(DataSnapshot ds : snapshot.getChildren()) {
+//                            String stt = ds.getKey();
+//
+//                            Log.d("Places stt", stt);
+//                            if (stt!= null){
+//                                last_index[0] = stt;
+//                            }
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void onCancelled(@NonNull DatabaseError error) {
+//
+//                    }
+//                });
+                int index = Integer.parseInt(last_index[0])+1;
+                last_index[0] = String.valueOf(index);
+                reference.child("places").child( last_index[0]).setValue(placesHelper);
 
-                reference.child(userID).child("places").limitToLast(1).addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        for(DataSnapshot ds : snapshot.getChildren()) {
-                            String stt = ds.getKey();
-
-                            Log.d("Places stt", stt);
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-
-                    }
-                });
             }
         });
     }
@@ -152,11 +164,8 @@ public class qr_scanner extends AppCompatActivity {
     }
 
     private boolean checkFormat(String code){
-        if (code.indexOf("!") == 0 && 35 == code.charAt(code.length()-1) ){
-            // ASCII 35 = #
-            return true;
-        }
-        return false;
+        // ASCII 35 = #
+        return code.indexOf("!") == 0 && 35 == code.charAt(code.length() - 1);
     }
     private String ProcessCode(String code){
         ///Slpit data
