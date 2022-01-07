@@ -19,13 +19,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Changeprofile extends AppCompatActivity {
 
-    TextInputLayout fullname;
-    TextInputLayout dob;
-    TextInputLayout studentid;
-    TextInputLayout email;
-    TextInputLayout phonenumber;
-    TextInputLayout id;
-    TextInputLayout password;
+    TextInputLayout fullname,dob,studentid,email,phonenumber,id,password;
 
     String NAME, DOB, STUDENTID, EMAIL, PHONENO, ID, PASSWORD;
 
@@ -60,23 +54,25 @@ public class Changeprofile extends AppCompatActivity {
         PASSWORD = intent.getStringExtra("password");
 
         fullname.getEditText().getText(NAME);
-        dob.setText(DOB);
-        studentid.setText(STUDENTID);
-        email.setText(EMAIL);
-        phonenumber.setText(PHONENO);
-        id.setText(ID);
-        password.setText(PASSWORD);
+        dob.getEditText(DOB);
+        studentid.getEditText(STUDENTID);
+        email.getEditText(EMAIL);
+        phonenumber.getEditText(PHONENO);
+        id.getEditText(ID);
+        password.getEditText(PASSWORD);
     }
 
     public void update(View view){
-        if(isNameChanged() || isDobChanged()){
+        if(isNameChanged() || isPasswordChange()){
             Toast.makeText(this,"Data has been updated", Toast.LENGTH_LONG).show();
         }
+        else Toast.makeText(this,"Data is same and can not be updated", Toast.LENGTH_LONG).show();
     }
 
-    private boolean isDobChanged() {
-        if(!DOB.equals(dob.getEditText().getText().toString())){
-            reference.child(NAME).child("doB").setValue(fullname.getEditText().getText().toString());
+    private boolean isPasswordChange() {
+        if(!PASSWORD.equals(password.getEditText().getText().toString())){
+            reference.child(NAME).child("password").setValue(password.getEditText().getText().toString());
+            PASSWORD = password.getEditText().getText().toString();
             return true;
         }
         else{
@@ -87,6 +83,7 @@ public class Changeprofile extends AppCompatActivity {
     private boolean isNameChanged() {
         if(!NAME.equals(fullname.getEditText().getText().toString())){
             reference.child(NAME).child("fullName").setValue(fullname.getEditText().getText().toString());
+            NAME = fullname.getEditText().getText().toString();
             return true;
         }
         else{
