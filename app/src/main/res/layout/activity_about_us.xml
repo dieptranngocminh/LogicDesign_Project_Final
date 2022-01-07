@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_yellow"
-    tools:context=".Aboutus">
-
+    tools:context=".about_us">
 
     <TextView
         android:id="@+id/ADTQRSCAN"
@@ -314,6 +313,5 @@
         app:layout_constraintHorizontal_bias="0.099"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text23" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

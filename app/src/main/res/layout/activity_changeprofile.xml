@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_yellow"
-    tools:context=".personal_inf">
+    tools:context=".Changeprofile">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -48,8 +48,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="105dp"
-        android:textSize="23dp"
         android:textColor="#433C03"
+        android:textSize="23dp"
         app:layout_constraintLeft_toLeftOf="@+id/FullnameTitle"
         app:layout_constraintTop_toBottomOf="@+id/FullnameTitle" />
 
@@ -197,15 +197,16 @@
         app:layout_constraintTop_toBottomOf="@+id/ID" />
 
     <Button
-        android:layout_width="150dp"
+        android:id="@+id/updatebtn"
+        android:layout_width="165dp"
         android:layout_height="60dp"
         android:layout_below="@+id/Password"
-        android:layout_marginLeft="140dp"
+        android:layout_marginLeft="130dp"
         android:layout_marginTop="10dp"
         android:backgroundTint="#eeecc0"
         android:gravity="center"
+        android:onClick="update"
         android:text="UPDATE"
         android:textColor="#433C03"
         android:textSize="30dp" />
-
 </RelativeLayout>

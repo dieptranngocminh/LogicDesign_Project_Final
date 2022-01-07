@@ -84,9 +84,9 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="238dp"
         android:text="Student ID"
+        android:textColor="#433C03"
         android:textSize="23dp"
         android:textStyle="bold"
-        android:textColor="#433C03"
         app:layout_constraintLeft_toLeftOf="@+id/Dob"
         app:layout_constraintTop_toBottomOf="@+id/DobTitle" />
 
