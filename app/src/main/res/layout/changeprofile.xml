@@ -196,4 +196,16 @@
         app:layout_constraintLeft_toLeftOf="@+id/PasswordTitle"
         app:layout_constraintTop_toBottomOf="@+id/ID" />
 
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/Password"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#eeecc0"
+        android:gravity="center"
+        android:text="UPDATE"
+        android:textColor="#433C03"
+        android:textSize="30dp" />
+
 </RelativeLayout>
