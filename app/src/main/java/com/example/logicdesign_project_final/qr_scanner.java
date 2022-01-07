@@ -31,7 +31,6 @@ import java.util.Calendar;
 
 public class qr_scanner extends AppCompatActivity {
     TextView txt;
-    TextView status_room;
     ProgressBar progressBar;
 
     CodeScanner codeScanner;
@@ -46,6 +45,7 @@ public class qr_scanner extends AppCompatActivity {
     Button btn_rescan,btn_confirm;
     //Code
     String code;
+    String [] split;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +59,7 @@ public class qr_scanner extends AppCompatActivity {
         btn_rescan = findViewById(R.id.btn_rescan);
         btn_confirm =findViewById(R.id.btn_confirm);
 
+        progressBar = findViewById(R.id.progressBar3);
         // Firebase
         mAuth = FirebaseAuth.getInstance();
 //Fire base
@@ -67,7 +68,8 @@ public class qr_scanner extends AppCompatActivity {
         userID = user.getUid();
         reference = rootNode.getReference("Users").child(userID);
 
-
+        progressBar.setVisibility(View.VISIBLE);
+        txt.setVisibility(View.INVISIBLE);
 
         codeScanner.setDecodeCallback(new DecodeCallback() {
             @Override
@@ -75,7 +77,9 @@ public class qr_scanner extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        ProgressCode(result);
+                        progressBar.setVisibility(View.INVISIBLE);
+                        txt.setVisibility(View.VISIBLE);
+                        code = ProgressCode(result);
 
                         //txt.setText(result.getText());
 
@@ -88,14 +92,18 @@ public class qr_scanner extends AppCompatActivity {
         codeScannerView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 codeScanner.startPreview();
+                progressBar.setVisibility(View.VISIBLE);
+                txt.setVisibility(View.INVISIBLE);
             }
         });
         btn_rescan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                txt.setText("SCANNING");
+                progressBar.setVisibility(View.VISIBLE);
+                txt.setVisibility(View.INVISIBLE);
                 codeScanner.startPreview();
 
                 codeScanner.setDecodeCallback(new DecodeCallback() {
@@ -104,7 +112,9 @@ public class qr_scanner extends AppCompatActivity {
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                ProgressCode(result);
+                                progressBar.setVisibility(View.INVISIBLE);
+                                txt.setVisibility(View.VISIBLE);
+                                code = ProgressCode(result);
 
                             }
                         });
@@ -122,20 +132,18 @@ public class qr_scanner extends AppCompatActivity {
                 String date = df.format(Calendar.getInstance().getTime());
                 Log.d("Time format",date);
                 final String[] last_index = new String[1];
-                PlacesHelper placesHelper = new PlacesHelper("A2","212",date);
+                PlacesHelper placesHelper = new PlacesHelper(split[0],split[1],date);
 
                 reference.child("places").push().setValue(placesHelper);
                 Log.d("QR",placesHelper.building + placesHelper.time+placesHelper.room);
 
-                reference.child("places").limitToLast(1).addValueEventListener(new ValueEventListener() {
+                reference.child("places").addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         for(DataSnapshot ds : snapshot.getChildren()) {
                             String stt = ds.getKey();
                             Log.d("Places stt", stt);
-                            if (stt!= null){
-                                last_index[0] = stt;
-                            }
+
                         }
                     }
 
@@ -166,17 +174,22 @@ public class qr_scanner extends AppCompatActivity {
     }
     private String ProcessCode(String code){
         ///Slpit data
-        code.replace("!","");
-        code.replace("#","");
+        code = code.replace("!","");
+        code = code.replace("#","");
     return code;
     }
 
-    private void ProgressCode(Result result){
-        String code = result.getText();
-        if(checkFormat(code))  {txt.setText(code);}
+    private String ProgressCode(Result result){
+        String code =result.getText();
+        if(checkFormat(code))  {
+            code = ProcessCode(code);
+            txt.setText(code);
+        }
         else{
             txt.setText("WRONG FORMAT");
         }
+        split = code.split(":");
+        return code;
     }
 
 //    private boolean CheckBuilding(String building){
