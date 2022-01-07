@@ -154,7 +154,7 @@
         android:background="#f0efe0"
         android:ems="10"
         android:hint=" Password"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:minHeight="48dp"
         android:textColor="#433C03"
         android:textColorHint="#4A4304"

@@ -61,7 +61,7 @@
         android:background="#FFFFF0"
         android:hint=" Password"
         android:minHeight="48dp"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:textColor="#433C03"
         android:textColorHint="#4A4304"
         app:layout_constraintBottom_toBottomOf="parent"

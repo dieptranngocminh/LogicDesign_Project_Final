@@ -62,12 +62,14 @@ public class Changeprofile extends AppCompatActivity {
     }
 
     public void update(View view){
-        if(isNameChanged() || isDobChanged())
+        if(isNameChanged() || isDobChanged());
     }
 
     private boolean isDobChanged() {
+        return true;
     }
 
     private boolean isNameChanged() {
+        return true;
     }
 }
