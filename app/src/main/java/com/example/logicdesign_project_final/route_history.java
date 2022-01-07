@@ -49,7 +49,7 @@ public class route_history extends AppCompatActivity {
         reference = rootNode.getReference("Users");
 
 
-        reference.child(user.getUid()).child("places").addValueEventListener(new ValueEventListener() {
+        reference.child(user.getUid()).child("places").limitToFirst(100).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
