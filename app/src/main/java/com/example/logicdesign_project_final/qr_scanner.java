@@ -124,30 +124,27 @@ public class qr_scanner extends AppCompatActivity {
                 final String[] last_index = new String[1];
                 PlacesHelper placesHelper = new PlacesHelper("A2","212",date);
 
-                //reference.child("new").push().setValue(placesHelper);
+                reference.child("places").push().setValue(placesHelper);
                 Log.d("QR",placesHelper.building + placesHelper.time+placesHelper.room);
 
-//                reference.child("places").limitToLast(1).addValueEventListener(new ValueEventListener() {
-//                    @Override
-//                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                        for(DataSnapshot ds : snapshot.getChildren()) {
-//                            String stt = ds.getKey();
-//
-//                            Log.d("Places stt", stt);
-//                            if (stt!= null){
-//                                last_index[0] = stt;
-//                            }
-//                        }
-//                    }
-//
-//                    @Override
-//                    public void onCancelled(@NonNull DatabaseError error) {
-//
-//                    }
-//                });
-                int index = Integer.parseInt(last_index[0])+1;
-                last_index[0] = String.valueOf(index);
-                reference.child("places").child( last_index[0]).setValue(placesHelper);
+                reference.child("places").limitToLast(1).addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        for(DataSnapshot ds : snapshot.getChildren()) {
+                            String stt = ds.getKey();
+                            Log.d("Places stt", stt);
+                            if (stt!= null){
+                                last_index[0] = stt;
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
 
             }
         });
