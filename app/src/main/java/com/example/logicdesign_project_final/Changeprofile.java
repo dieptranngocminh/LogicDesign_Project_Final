@@ -1,71 +1,73 @@
 package com.example.logicdesign_project_final;
 
-import android.os.Bundle;
-import android.widget.TextView;
-import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 public class Changeprofile extends AppCompatActivity {
 
-    private FirebaseUser user;
-    private DatabaseReference reference;
+    TextView fullname;
+    TextView dob;
+    TextView studentid;
+    TextView email;
+    TextView phonenumber;
+    TextView id;
+    TextView password;
 
-    private String userID;
+    String NAME, DOB, STUDENTID, EMAIL, PHONENO, ID, PASSWORD;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_personal_inf);
+        setContentView(R.layout.activity_changeprofile);
 
-        user = FirebaseAuth.getInstance().getCurrentUser();
-        reference = FirebaseDatabase.getInstance().getReference("Users");
-        userID = user.getUid();
+        fullname = findViewById(R.id.Fullname);
+        dob = findViewById(R.id.Dob);
+        studentid = findViewById(R.id.StudentID);
+        email = findViewById(R.id.Email);
+        phonenumber = findViewById(R.id.Phonenumber);
+        id = findViewById(R.id.ID);
+        password = findViewById(R.id.Password);
 
-        final TextView FullnameTextview = (TextView)findViewById(R.id.Fullname);
-        final TextView DobTextview = (TextView)findViewById(R.id.Dob);
-        final TextView StudentIDTextview = (TextView)findViewById(R.id.StudentID);
-        final TextView EmailTextview = (TextView)findViewById(R.id.Email);
-        final TextView PhonenumberTextview = (TextView)findViewById(R.id.Phonenumber);
-        final TextView IDTextview = (TextView)findViewById(R.id.ID);
-        final TextView PasswordTextview = (TextView)findViewById(R.id.Password);
+        showAlluserdata();
+    }
 
-        reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                UserHelper userProfile = snapshot.getValue(UserHelper.class);
+    private void showAlluserdata(){
 
-                if(userProfile != null){
-                    String Fullname = userProfile.fullname;
-                    String Dob = userProfile.DoB;
-                    String StudentID = userProfile.studentID;
-                    String Email = userProfile.email;
-                    String Phonenumber = userProfile.phone;
-                    String ID = userProfile.ID;
-                    String Password = userProfile.password;
+        Intent intent = getIntent();
+        NAME = intent.getStringExtra("fullName");
+        DOB = intent.getStringExtra("doB");
+        STUDENTID = intent.getStringExtra("studentID");
+        EMAIL = intent.getStringExtra("email");
+        PHONENO = intent.getStringExtra("phone");
+        ID = intent.getStringExtra("id");
+        PASSWORD = intent.getStringExtra("password");
 
-                    FullnameTextview.setText(Fullname);
-                    DobTextview.setText(Dob);
-                    StudentIDTextview.setText(StudentID);
-                    EmailTextview.setText(Email);
-                    PhonenumberTextview.setText(Phonenumber);
-                    IDTextview.setText(ID);
-                    PasswordTextview.setText(Password);
-                }
-            }
+        fullname.setText(NAME);
+        dob.setText(DOB);
+        studentid.setText(STUDENTID);
+        email.setText(EMAIL);
+        phonenumber.setText(PHONENO);
+        id.setText(ID);
+        password.setText(PASSWORD);
+    }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(Changeprofile.this,"Something wrong happened!", Toast.LENGTH_LONG).show();
-            }
-        });
+    public void update(View view){
+        if(isNameChanged() || isDobChanged())
+    }
+
+    private boolean isDobChanged() {
+    }
+
+    private boolean isNameChanged() {
     }
 }

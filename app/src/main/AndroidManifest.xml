@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.logicdesign_project_final">
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,45 +10,46 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LogicDesign_Project_Final">
         <activity
+            android:name=".Changeprofile"
+            android:exported="false"
+            android:parentActivityName=".Setting"/>
+        <activity
+            android:name=".about_us"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
+        <activity
             android:name=".Setting"
+            android:exported="false"
             android:label="Setting"
-            android:parentActivityName=".MainActivity"
-            android:exported="false"/>
-<!--            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>-->
+            android:parentActivityName=".MainActivity" /> <!-- android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/> -->
         <activity
             android:name=".Route"
-            android:parentActivityName=".MainActivity"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
         <activity
             android:name=".Register"
-            android:parentActivityName=".Login"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
+            android:parentActivityName=".Login"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
         <activity
             android:name=".personal_inf"
-            android:parentActivityName=".MainActivity"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
         <activity
             android:name=".Usermanual"
-            android:parentActivityName=".MainActivity"
-            android:exported="false"/>
-<!--            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>-->
+            android:exported="false"
+            android:parentActivityName=".MainActivity" /> <!-- android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/> -->
         <activity
             android:name=".MainActivity"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
         <activity
             android:name=".qr_scanner"
-            android:parentActivityName=".MainActivity"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
-        <activity
-            android:name=".Aboutus"
             android:parentActivityName=".MainActivity"
-            android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
         <activity
             android:name=".Login"
             android:exported="true"
@@ -61,8 +61,8 @@
             </intent-filter>
         </activity>
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
 
-
-
+    <uses-permission android:name="android.permission.CAMERA" />
 
 </manifest>
