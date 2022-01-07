@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +28,9 @@ import java.util.Calendar;
 
 public class qr_scanner extends AppCompatActivity {
     TextView txt;
+    TextView status_room;
+    ProgressBar progressBar;
+
     CodeScanner codeScanner;
     CodeScannerView codeScannerView;
 
@@ -63,11 +67,7 @@ public class qr_scanner extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        code = result.getText();
-                        if(checkFormat(code))  {txt.setText(code);}
-                        else{
-                            txt.setText("WRONG FORMAT");
-                        }
+                        ProgressCode(result);
 
                         //txt.setText(result.getText());
 
@@ -77,20 +77,26 @@ public class qr_scanner extends AppCompatActivity {
             }
         });
 
+        codeScannerView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                codeScanner.startPreview();
+            }
+        });
         btn_rescan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                txt.setText("SCANNING");
+                codeScanner.startPreview();
+
                 codeScanner.setDecodeCallback(new DecodeCallback() {
                     @Override
                     public void onDecoded(@NonNull Result result) {
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                code = result.getText();
-                                if(checkFormat(code))  {txt.setText(code);}
-                                else{
-                                    txt.setText("WRONG FORMAT");
-                                }
+                                ProgressCode(result);
 
                                 //txt.setText(result.getText());
 
@@ -141,6 +147,14 @@ public class qr_scanner extends AppCompatActivity {
         code.replace("!","");
         code.replace("#","");
     return code;
+    }
+
+    private void ProgressCode(Result result){
+        code = result.getText();
+        if(checkFormat(code))  {txt.setText(code);}
+        else{
+            txt.setText("WRONG FORMAT");
+        }
     }
 //    private boolean CheckBuilding(String building){
 //        rootNode = FirebaseDatabase.getInstance();
