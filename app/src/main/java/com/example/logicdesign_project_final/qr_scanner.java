@@ -128,7 +128,7 @@ public class qr_scanner extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Take time on phone
-                DateFormat df = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss");
+                DateFormat df = new SimpleDateFormat("EEE, d MMM yyyy hh:mm aaa");
                 String date = df.format(Calendar.getInstance().getTime());
                 Log.d("Time format",date);
                 final String[] last_index = new String[1];
