@@ -24,11 +24,15 @@ public class Changeprofile extends AppCompatActivity {
     String NAME, DOB, STUDENTID, EMAIL, PHONENO, ID, PASSWORD;
 
     DatabaseReference reference;
+    FirebaseAuth mAuth;
+    FirebaseUser user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_changeprofile);
 
+        mAuth= FirebaseAuth.getInstance();
+        user = mAuth.getCurrentUser();
         reference = FirebaseDatabase.getInstance().getReference("Users");
 
         fullname = findViewById(R.id.Fullname);
@@ -71,7 +75,7 @@ public class Changeprofile extends AppCompatActivity {
 
     private boolean isIDChanged() {
         if(!ID.equals(id.getEditText().getText().toString())){
-            reference.child(NAME).child("id").setValue(id.getEditText().getText().toString());
+            reference.child(user.getUid()).child("id").setValue(id.getEditText().getText().toString());
             ID = id.getEditText().getText().toString();
             return true;
         }
@@ -82,7 +86,7 @@ public class Changeprofile extends AppCompatActivity {
 
     private boolean isPhonenumberChanged() {
         if(!PHONENO.equals(phonenumber.getEditText().getText().toString())){
-            reference.child(NAME).child("phone").setValue(phonenumber.getEditText().getText().toString());
+            reference.child(user.getUid()).child("phone").setValue(phonenumber.getEditText().getText().toString());
             PHONENO = phonenumber.getEditText().getText().toString();
             return true;
         }
@@ -93,7 +97,7 @@ public class Changeprofile extends AppCompatActivity {
 
     private boolean isEmailChanged() {
         if(!EMAIL.equals(email.getEditText().getText().toString())){
-            reference.child(NAME).child("email").setValue(email.getEditText().getText().toString());
+            reference.child(user.getUid()).child("email").setValue(email.getEditText().getText().toString());
             EMAIL = email.getEditText().getText().toString();
             return true;
         }
@@ -104,7 +108,7 @@ public class Changeprofile extends AppCompatActivity {
 
     private boolean isStudentidChanged() {
         if(!STUDENTID.equals(studentid.getEditText().getText().toString())){
-            reference.child(NAME).child("studentID").setValue(studentid.getEditText().getText().toString());
+            reference.child(user.getUid()).child("studentID").setValue(studentid.getEditText().getText().toString());
             STUDENTID = studentid.getEditText().getText().toString();
             return true;
         }
@@ -115,7 +119,7 @@ public class Changeprofile extends AppCompatActivity {
 
     private boolean isDobchanged() {
         if(!DOB.equals(dob.getEditText().getText().toString())){
-            reference.child(NAME).child("doB").setValue(dob.getEditText().getText().toString());
+            reference.child(user.getUid()).child("doB").setValue(dob.getEditText().getText().toString());
             DOB = dob.getEditText().getText().toString();
             return true;
         }
@@ -126,7 +130,7 @@ public class Changeprofile extends AppCompatActivity {
 
     private boolean isPasswordChanged() {
         if(!PASSWORD.equals(password.getEditText().getText().toString())){
-            reference.child(NAME).child("password").setValue(password.getEditText().getText().toString());
+            reference.child(user.getUid()).child("password").setValue(password.getEditText().getText().toString());
             PASSWORD = password.getEditText().getText().toString();
             return true;
         }
@@ -137,7 +141,7 @@ public class Changeprofile extends AppCompatActivity {
 
     private boolean isNameChanged() {
         if(!NAME.equals(fullname.getEditText().getText().toString())){
-            reference.child(NAME).child("fullName").setValue(fullname.getEditText().getText().toString());
+            reference.child(user.getUid()).child("fullName").setValue(fullname.getEditText().getText().toString());
             NAME = fullname.getEditText().getText().toString();
             return true;
         }

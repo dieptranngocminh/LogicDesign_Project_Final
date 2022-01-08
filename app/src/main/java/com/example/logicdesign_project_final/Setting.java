@@ -22,7 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class Setting extends AppCompatActivity {
 
     Button deleteaccount;
-
+    Button changeprfbtn;
     private FirebaseUser user;
     private DatabaseReference reference;
 
@@ -32,7 +32,7 @@ public class Setting extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
 
-        Button changeprfbtn = (Button)findViewById(R.id.changeprofile);
+        changeprfbtn = (Button)findViewById(R.id.changeprofile);
 
         deleteaccount = findViewById(R.id.deleteaccount);
     //Firebase
