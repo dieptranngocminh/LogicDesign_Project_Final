@@ -53,23 +53,78 @@ public class Changeprofile extends AppCompatActivity {
         ID = intent.getStringExtra("id");
         PASSWORD = intent.getStringExtra("password");
 
-        fullname.getEditText().getText(NAME);
-        dob.getEditText(DOB);
-        studentid.getEditText(STUDENTID);
-        email.getEditText(EMAIL);
-        phonenumber.getEditText(PHONENO);
-        id.getEditText(ID);
-        password.getEditText(PASSWORD);
+        fullname.getEditText().setText(NAME);
+        dob.getEditText().setText(DOB);
+        studentid.getEditText().setText(STUDENTID);
+        email.getEditText().setText(EMAIL);
+        phonenumber.getEditText().setText(PHONENO);
+        id.getEditText().setText(ID);
+        password.getEditText().setText(PASSWORD);
     }
 
     public void update(View view){
-        if(isNameChanged() || isPasswordChange()){
+        if(isNameChanged() || isDobchanged() || isStudentidChanged() || isEmailChanged() || isPhonenumberChanged() || isIDChanged() || isPasswordChanged()){
             Toast.makeText(this,"Data has been updated", Toast.LENGTH_LONG).show();
         }
         else Toast.makeText(this,"Data is same and can not be updated", Toast.LENGTH_LONG).show();
     }
 
-    private boolean isPasswordChange() {
+    private boolean isIDChanged() {
+        if(!ID.equals(id.getEditText().getText().toString())){
+            reference.child(NAME).child("id").setValue(id.getEditText().getText().toString());
+            ID = id.getEditText().getText().toString();
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    private boolean isPhonenumberChanged() {
+        if(!PHONENO.equals(phonenumber.getEditText().getText().toString())){
+            reference.child(NAME).child("phone").setValue(phonenumber.getEditText().getText().toString());
+            PHONENO = phonenumber.getEditText().getText().toString();
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    private boolean isEmailChanged() {
+        if(!EMAIL.equals(email.getEditText().getText().toString())){
+            reference.child(NAME).child("email").setValue(email.getEditText().getText().toString());
+            EMAIL = email.getEditText().getText().toString();
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    private boolean isStudentidChanged() {
+        if(!STUDENTID.equals(studentid.getEditText().getText().toString())){
+            reference.child(NAME).child("studentID").setValue(studentid.getEditText().getText().toString());
+            STUDENTID = studentid.getEditText().getText().toString();
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    private boolean isDobchanged() {
+        if(!DOB.equals(dob.getEditText().getText().toString())){
+            reference.child(NAME).child("doB").setValue(dob.getEditText().getText().toString());
+            DOB = dob.getEditText().getText().toString();
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    private boolean isPasswordChanged() {
         if(!PASSWORD.equals(password.getEditText().getText().toString())){
             reference.child(NAME).child("password").setValue(password.getEditText().getText().toString());
             PASSWORD = password.getEditText().getText().toString();
