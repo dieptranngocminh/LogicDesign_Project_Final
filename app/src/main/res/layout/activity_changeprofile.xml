@@ -45,7 +45,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Email_prof"
+        app:layout_constraintTop_toBottomOf="@+id/StudentID_prof"
         app:layout_constraintVertical_bias="0.054" />
 
     <EditText
@@ -110,45 +110,45 @@
 
 
 
-    <EditText
-        android:id="@+id/password_prof"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginStart="24dp"
-        android:background="#f0efe0"
-        android:ems="10"
-        android:hint=" Password"
-        android:inputType="textPassword"
-        android:minHeight="48dp"
-        android:textColor="#433C03"
-        android:textColorHint="#4A4304"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ID_prof"
-        app:layout_constraintVertical_bias="0.108" />
+<!--    <EditText-->
+<!--        android:id="@+id/password_prof"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="24dp"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:background="#f0efe0"-->
+<!--        android:ems="10"-->
+<!--        android:hint=" Password"-->
+<!--        android:inputType="textPassword"-->
+<!--        android:minHeight="48dp"-->
+<!--        android:textColor="#433C03"-->
+<!--        android:textColorHint="#4A4304"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/ID_prof"-->
+<!--        app:layout_constraintVertical_bias="0.108" />-->
 
-    <EditText
-        android:id="@+id/Email_prof"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginStart="24dp"
-        android:background="#f0efe0"
-        android:ems="10"
-        android:hint=" Email"
-        android:inputType="textEmailAddress"
-        android:minHeight="48dp"
-        android:textColor="#433C03"
-        android:textColorHint="#4A4304"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/StudentID_prof"
-        app:layout_constraintVertical_bias="0.037" />
+<!--    <EditText-->
+<!--        android:id="@+id/Email_prof"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="24dp"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:background="#f0efe0"-->
+<!--        android:ems="10"-->
+<!--        android:hint=" Email"-->
+<!--        android:inputType="textEmailAddress"-->
+<!--        android:minHeight="48dp"-->
+<!--        android:textColor="#433C03"-->
+<!--        android:textColorHint="#4A4304"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/StudentID_prof"-->
+<!--        app:layout_constraintVertical_bias="0.037" />-->
 
     <EditText
         android:id="@+id/Dob_prof"
@@ -174,14 +174,17 @@
         android:id="@+id/updatebtn"
         android:layout_width="165dp"
         android:layout_height="60dp"
-        android:layout_below="@+id/password_prof"
+        android:layout_below="@+id/ID_prof"
         android:backgroundTint="#eeecc0"
         android:gravity="center"
         android:onClick="update"
         android:text="UPDATE"
         android:textColor="#433C03"
         android:textSize="30dp"
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="606dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.447"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ID_prof"
+        app:layout_constraintVertical_bias="0.357" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,7 +22,7 @@
         <activity
             android:name=".route_history"
             android:exported="false"
-            android:label="Route"
+            android:label="Route History"
             android:parentActivityName=".MainActivity" />
 <!--        <activity-->
 <!--            android:name=".route_history"-->
@@ -31,6 +31,7 @@
         <activity
             android:name=".Changeprofile"
             android:exported="false"
+            android:label="Change Profile"
             android:parentActivityName=".Setting" />
         <activity
             android:name=".about_us"
