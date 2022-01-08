@@ -57,13 +57,13 @@ public class Changeprofile extends AppCompatActivity {
         ID = intent.getStringExtra("id");
         PASSWORD = intent.getStringExtra("password");
 
-        fullname.getEditText().setText(NAME);
-        dob.getEditText().setText(DOB);
-        studentid.getEditText().setText(STUDENTID);
-        email.getEditText().setText(EMAIL);
-        phonenumber.getEditText().setText(PHONENO);
-        id.getEditText().setText(ID);
-        password.getEditText().setText(PASSWORD);
+//        fullname.getEditText().setText(NAME);
+//        dob.getEditText().setText(DOB);
+//        studentid.getEditText().setText(STUDENTID);
+//        email.getEditText().setText(EMAIL);
+//        phonenumber.getEditText().setText(PHONENO);
+//        id.getEditText().setText(ID);
+//        password.getEditText().setText(PASSWORD);
     }
 
     public void update(View view){
